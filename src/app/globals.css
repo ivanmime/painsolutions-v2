@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────
+   Pain Solutions · Brand Design System v3.1
+   Direction: String / Med Genius — bold sans, solid color blocks.
+   ───────────────────────────────────────────────────────── */
+
+@theme {
+  /* ── Brand palette ────────────────────────────────────── */
+  --color-paper: #ffffff;
+  --color-ice: #ebf9fa;
+  --color-ice-deep: #d7ecee;
+  --color-teal: #3da4ab;           /* brand teal — large block fills */
+  --color-teal-deep: #016c7c;
+  --color-navy: #07316d;           /* primary dark — bold headlines */
+  --color-navy-deep: #051e44;      /* deepest navy — footer */
+  --color-accent: #b6432a;         /* signal vermillion */
+
+  /* Text */
+  --color-ink: #0a1f3d;
+  --color-ink-soft: #1f3358;
+  --color-ink-muted: #4a5b72;
+  --color-line: #d9e8ea;
+  --color-line-strong: #b6c8ca;
+
+  /* ── Typography ───────────────────────────────────────── */
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+
+  /* ── Shadows ──────────────────────────────────────────── */
+  --shadow-card: 0 1px 0 rgb(7 49 109 / 0.04), 0 8px 24px rgb(7 49 109 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(7 49 109 / 0.06), 0 20px 48px -12px rgb(7 49 109 / 0.20);
+
+  /* ── Motion ───────────────────────────────────────────── */
+  --ease-editorial: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-feature-settings: "ss01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-navy);
+  color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.hairline-b {
+  border-bottom: 1px solid var(--color-line);
+}
+.hairline-t {
+  border-top: 1px solid var(--color-line);
+}
+
+.paper-grain {
+  background-image:
+    radial-gradient(ellipse 1px 1px at 25% 30%, rgb(7 49 109 / 0.025) 50%, transparent 51%),
+    radial-gradient(ellipse 1px 1px at 75% 65%, rgb(61 164 171 / 0.04) 50%, transparent 51%);
+  background-size: 7px 7px, 11px 11px;
+  background-position: 0 0, 3px 3px;
+}

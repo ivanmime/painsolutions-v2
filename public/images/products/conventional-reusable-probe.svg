@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" fill="none">
+  <rect width="1200" height="900" fill="#f5f1ea"/>
+  <g opacity="0.6">
+    <path d="M0 80 L1200 80" stroke="#0e1726" stroke-opacity="0.08" stroke-width="1"/>
+    <path d="M0 820 L1200 820" stroke="#0e1726" stroke-opacity="0.08" stroke-width="1"/>
+  </g>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#0e1726" fill-opacity="0.45">
+    <text x="60" y="55" font-size="12" letter-spacing="3" textLength="220">FIG. 03 — CONVENTIONAL PROBE</text>
+    <text x="940" y="55" font-size="12" letter-spacing="3" textLength="200">REUSABLE · 18G</text>
+    <text x="60" y="868" font-size="12" letter-spacing="3" textLength="160">REF. CRP-STD-18</text>
+    <text x="980" y="868" font-size="12" letter-spacing="3" textLength="160">AVANOS · PERÚ</text>
+  </g>
+  <g transform="translate(0,40)">
+    <rect x="500" y="170" width="200" height="80" rx="6" stroke="#0e1726" stroke-width="6"/>
+    <line x1="540" y1="200" x2="660" y2="200" stroke="#0e1726" stroke-width="3" stroke-opacity="0.35"/>
+    <line x1="540" y1="220" x2="660" y2="220" stroke="#0e1726" stroke-width="3" stroke-opacity="0.35"/>
+    <rect x="510" y="250" width="180" height="30" stroke="#0e1726" stroke-width="3" fill="none"/>
+    <path d="M540 250 L540 280 M660 250 L660 280" stroke="#0e1726" stroke-width="3"/>
+    <path d="M580 280 L580 700 L600 760 L620 700 L620 280" stroke="#0e1726" stroke-width="6" fill="none" stroke-linejoin="miter"/>
+    <line x1="588" y1="300" x2="588" y2="700" stroke="#0e1726" stroke-width="2" stroke-opacity="0.35"/>
+    <line x1="612" y1="300" x2="612" y2="700" stroke="#0e1726" stroke-width="2" stroke-opacity="0.35"/>
+    <circle cx="600" cy="700" r="6" fill="#b6432a"/>
+  </g>
+  <g transform="translate(0,40)" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" fill="#0e1726" fill-opacity="0.55" font-size="11" letter-spacing="2">
+    <line x1="700" y1="210" x2="850" y2="210" stroke="#0e1726" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="700" cy="210" r="3" fill="#0e1726" fill-opacity="0.6"/>
+    <text x="870" y="205">CONNECTOR</text>
+    <line x1="700" y1="700" x2="850" y2="700" stroke="#0e1726" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="700" cy="700" r="3" fill="#b6432a"/>
+    <text x="870" y="695">ACTIVE TIP 5 mm</text>
+  </g>
+</svg>
