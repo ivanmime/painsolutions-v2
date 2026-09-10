@@ -234,7 +234,7 @@ export default function SiteHeader() {
                         )}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal transition-colors hover:text-paper"
+                        className="inline-flex items-center gap-2 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-light transition-colors hover:text-paper"
                       >
                         Hablar por WhatsApp
                         <ArrowOut />

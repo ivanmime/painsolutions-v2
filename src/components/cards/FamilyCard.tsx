@@ -11,7 +11,7 @@ export function FamilyCard({ family }: { family: Family }) {
       >
         {/* Top row */}
         <div className="flex items-start justify-between border-b border-line pb-4 group-hover:border-paper/20">
-          <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-deep group-hover:text-teal">
+          <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-deep group-hover:text-teal-light">
             {family.code}
           </span>
           <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted group-hover:text-paper/55">
@@ -34,7 +34,7 @@ export function FamilyCard({ family }: { family: Family }) {
           </span>
           <span
             aria-hidden="true"
-            className="grid h-9 w-9 place-items-center bg-navy text-paper transition-all duration-300 group-hover:bg-teal group-hover:text-navy"
+            className="grid h-9 w-9 place-items-center bg-navy text-paper transition-all duration-300 group-hover:bg-teal-light group-hover:text-navy"
           >
             <svg
               width="14"

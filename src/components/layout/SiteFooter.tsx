@@ -25,7 +25,7 @@ export default function SiteFooter() {
               </span>
               <span className="flex flex-col leading-[1]">
                 <span className="font-sans text-[1.125rem] font-extrabold uppercase text-paper">
-                  Pain <span className="text-teal">Solutions</span>
+                  Pain <span className="text-teal-light">Solutions</span>
                 </span>
                 <span className="mt-1 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-paper/55">
                   Tecnología médica especializada
@@ -46,7 +46,7 @@ export default function SiteFooter() {
                 <li>
                   <Link
                     href="/soluciones/rfa"
-                    className="text-paper/80 transition-colors hover:text-teal"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
                   >
                     Radiofrecuencia (RFA)
                   </Link>
@@ -55,7 +55,7 @@ export default function SiteFooter() {
                   <li key={f.slug}>
                     <Link
                       href={`/soluciones/rfa/${f.slug}`}
-                      className="text-paper/80 transition-colors hover:text-teal"
+                      className="text-paper/80 transition-colors hover:text-teal-light"
                     >
                       {f.name}
                     </Link>
@@ -71,7 +71,7 @@ export default function SiteFooter() {
                 <li>
                   <Link
                     href="/nosotros"
-                    className="text-paper/80 transition-colors hover:text-teal"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
                   >
                     Nosotros
                   </Link>
@@ -79,7 +79,7 @@ export default function SiteFooter() {
                 <li>
                   <Link
                     href="/asesoria"
-                    className="text-paper/80 transition-colors hover:text-teal"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
                   >
                     Asesoría
                   </Link>
@@ -87,7 +87,7 @@ export default function SiteFooter() {
                 <li>
                   <Link
                     href="/contacto"
-                    className="text-paper/80 transition-colors hover:text-teal"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
                   >
                     Contacto
                   </Link>
@@ -104,7 +104,7 @@ export default function SiteFooter() {
                     href={whatsappLink()}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-paper/80 transition-colors hover:text-teal"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
                   >
                     WhatsApp
                   </a>
@@ -112,7 +112,7 @@ export default function SiteFooter() {
                 <li>
                   <a
                     href={`mailto:${site.contactEmail}`}
-                    className="text-paper/80 transition-colors hover:text-teal"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
                   >
                     {site.contactEmail}
                   </a>
@@ -121,14 +121,6 @@ export default function SiteFooter() {
               </ul>
             </FooterCol>
           </div>
-        </div>
-
-        {/* Wide colophon statement */}
-        <div className="border-t border-paper/15 py-12">
-          <p className="font-sans text-[1.5rem] font-extrabold uppercase leading-[1.1] tracking-[-0.015em] text-paper text-balance sm:text-[2rem] lg:text-[2.5rem]">
-            Cada procedimiento intervencionista del dolor merece un sistema
-            validado por el fabricante, no una aproximación.
-          </p>
         </div>
 
         {/* Bottom legal */}

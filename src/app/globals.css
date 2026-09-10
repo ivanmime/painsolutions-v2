@@ -10,7 +10,8 @@
   --color-paper: #ffffff;
   --color-ice: #ebf9fa;
   --color-ice-deep: #d7ecee;
-  --color-teal: #3da4ab;           /* brand teal — large block fills */
+  --color-teal: #1a8290;           /* brand teal — fills with white text */
+  --color-teal-light: #63c6cf;     /* teal accent on dark backgrounds */
   --color-teal-deep: #016c7c;
   --color-navy: #07316d;           /* primary dark — bold headlines */
   --color-navy-deep: #051e44;      /* deepest navy — footer */
@@ -24,7 +25,8 @@
   --color-line-strong: #b6c8ca;
 
   /* ── Typography ───────────────────────────────────────── */
-  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
 

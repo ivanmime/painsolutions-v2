@@ -89,7 +89,7 @@ export function SectionHeading({
         }`}
       >
         {title}
-        {accent ? <span className="text-teal">{accent}</span> : null}
+        {accent ? <span className="text-teal-deep">{accent}</span> : null}
       </h2>
       {description ? (
         <p

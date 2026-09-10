@@ -80,7 +80,7 @@ export default function Hero() {
               <div key={label}>
                 <dt className="sr-only">{label}</dt>
                 <dd className="font-display text-2xl font-bold text-navy">{value}</dd>
-                <dd className="mt-0.5 text-xs font-medium text-muted">{label}</dd>
+                <dd className="mt-0.5 text-xs font-medium text-ink-muted">{label}</dd>
               </div>
             ))}
             </motion.dl>
