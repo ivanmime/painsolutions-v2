@@ -47,6 +47,35 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "MedicalOrganization"],
+      "@id": `${site.url}#organization`,
+      name: site.name,
+      url: site.url,
+      logo: `${site.url}/images/logo.jpg`,
+      description: site.description,
+      email: site.contactEmail,
+      telephone: `+${site.whatsappNumber}`,
+      foundingDate: "2026",
+      areaServed: { "@type": "Country", name: "Perú" },
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Av. José Leguía y Meléndez 1309",
+        addressLocality: "Pueblo Libre",
+        postalCode: "15084",
+        addressCountry: "PE",
+      },
+      knowsAbout: [
+        { "@type": "MedicalSpecialty", name: "Pain Management" },
+        { "@type": "MedicalSpecialty", name: "Anesthesiology" },
+      ],
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -57,6 +86,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col antialiased" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <a
           href="#contenido"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:bg-navy focus:px-4 focus:py-2 focus:text-sm focus:text-paper"

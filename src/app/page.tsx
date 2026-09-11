@@ -69,18 +69,15 @@ export default function HomePage() {
             <div className="col-span-12 lg:col-span-5">
               <Reveal delay={0.15}>
                 <p className="text-[1.0625rem] leading-[1.65] text-paper/75">
-                  Distribuimos la línea completa de un solo fabricante y
-                  validamos cada configuración con el equipo clínico antes
-                  de cualquier cotización. Cánulas, sondas, generadores y
-                  accesorios del mismo sistema, no componentes sueltos.
+                  Trabajamos con soluciones de radiofrecuencia que integran
+                  equipos, cánulas, sondas y accesorios. Acompañamos a
+                  profesionales e instituciones en la elección de la
+                  configuración adecuada antes de cotizar.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <ButtonLink href="/soluciones/rfa" variant="primary-light">
                     Conocer RFA Solutions
                   </ButtonLink>
-                  <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-paper/55">
-                    480 kHz · Avanos
-                  </span>
                 </div>
               </Reveal>
             </div>
@@ -140,7 +137,7 @@ export default function HomePage() {
             <Stat
               value="01"
               label="Fabricante"
-              hint="Avanos · RFA Solutions"
+              hint="Avanos"
               light
             />
             <Stat

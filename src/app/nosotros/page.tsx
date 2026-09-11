@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import {
   Container,
@@ -38,20 +39,13 @@ const pillars = [
   },
 ];
 
-const milestones = [
-  { year: "2019", text: "Inicio de operaciones como distribuidor especializado en RFA." },
-  { year: "2021", text: "Acuerdo de distribución con Avanos para Perú." },
-  { year: "2023", text: "Habilitación de la línea Cooled RFA y bombas de perfusión." },
-  { year: "2026", text: "Catálogo vigente con 13 referencias activas y cobertura nacional." },
-];
-
 export default function NosotrosPage() {
   return (
     <>
       <section className="border-b border-line bg-paper">
         <Container className="pt-12 pb-16 sm:pt-16 sm:pb-20">
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
-            <div className="col-span-12 lg:col-span-8">
+            <div className="col-span-12">
               <Reveal>
                 <Eyebrow number="N.01">Pain Solutions</Eyebrow>
                 <h1 className="mt-6 font-display text-[2.5rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink text-balance sm:text-[3.5rem] lg:text-[4.5rem]">
@@ -66,25 +60,6 @@ export default function NosotrosPage() {
                 </p>
               </Reveal>
             </div>
-            <div className="col-span-12 lg:col-span-4">
-              <Reveal delay={0.15}>
-                <div className="border border-ink/12 bg-ice/40 p-6">
-                  <Eyebrow number="N.02">Hoja de ruta</Eyebrow>
-                  <ul className="mt-6 space-y-5">
-                    {milestones.map((m) => (
-                      <li key={m.year} className="flex gap-4">
-                        <span className="font-display text-[1.5rem] font-medium leading-none text-ink">
-                          {m.year}
-                        </span>
-                        <p className="text-[0.875rem] leading-[1.55] text-ink-soft">
-                          {m.text}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </Reveal>
-            </div>
           </div>
         </Container>
       </section>
@@ -94,7 +69,7 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-12 gap-x-6 gap-y-12">
             <div className="col-span-12 lg:col-span-4">
               <Reveal>
-                <Eyebrow number="N.03">Quiénes somos</Eyebrow>
+                <Eyebrow number="N.02">Quiénes somos</Eyebrow>
               </Reveal>
             </div>
             <div className="col-span-12 lg:col-span-8">
@@ -122,7 +97,7 @@ export default function NosotrosPage() {
       <section className="border-y border-line bg-ink py-14 text-paper sm:py-16">
         <Container>
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
-            <Stat value="07" label="Años" hint="Desde 2019" light />
+            <Stat value="30+" label="Años" hint="Manejo del dolor" light />
             <Stat value="01" label="Fabricante" hint="Avanos" light />
             <Stat value="13" label="Referencias" hint="Catálogo vigente" light />
             <Stat value="PE" label="Cobertura" hint="Nacional" light />
@@ -135,7 +110,7 @@ export default function NosotrosPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Cómo trabajamos"
-              number="N.04"
+              number="N.03"
               title="Cuatro pilares, un solo criterio."
               description="El proceso detrás de cada cotización que entregamos."
             />
@@ -164,6 +139,157 @@ export default function NosotrosPage() {
             ))}
           </Stagger>
         </Container>
+      </section>
+
+      {/* ── N.04 · Referente médico ─────────────────────────── */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <div className="grid grid-cols-12 gap-x-6 gap-y-10">
+            <div className="col-span-12 lg:col-span-5">
+              <Reveal>
+                <Eyebrow number="N.04">Referente médico</Eyebrow>
+                <h2 className="mt-6 font-display text-[2rem] font-medium leading-[1.1] tracking-[-0.02em] text-ink text-balance sm:text-[2.5rem] lg:text-[3rem]">
+                  Una mirada clínica detrás de cada solución.
+                </h2>
+                <p className="mt-6 max-w-xl text-[1.0625rem] leading-[1.65] text-ink-soft">
+                  La experiencia médica que respalda el conocimiento que Pain
+                  Solutions acerca a profesionales e instituciones para la
+                  elección y el uso adecuado de cada solución.
+                </p>
+              </Reveal>
+            </div>
+            <div className="col-span-12 lg:col-span-7">
+              <Reveal delay={0.15}>
+                <div className="border-2 border-ink bg-paper p-6 sm:p-8">
+                  <div className="grid grid-cols-12 gap-6">
+                    <div className="col-span-12 sm:col-span-4 lg:col-span-5">
+                      <Image
+                        src="/images/doctor.jpg"
+                        alt="Dr. Víctor Ignacio Espinoza Aranguren"
+                        width={500}
+                        height={791}
+                        className="h-auto w-full"
+                      />
+                    </div>
+                    <div className="col-span-12 sm:col-span-8 lg:col-span-7">
+                      <p className="font-display text-[1.375rem] font-medium leading-[1.15] text-ink">
+                        Dr. Víctor Ignacio Espinoza Aranguren
+                      </p>
+                      <p className="mt-2 font-mono text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-teal-deep">
+                        Anestesiología y Medicina del Dolor
+                      </p>
+                      <p className="mt-6 text-[0.9375rem] leading-[1.65] text-ink-soft">
+                        Con más de 30 años de experiencia en el manejo del
+                        dolor, su práctica clínica se ha desarrollado alrededor
+                        del dolor agudo y crónico, las técnicas intervencionistas
+                        y los cuidados paliativos.
+                      </p>
+                      <p className="mt-4 text-[0.9375rem] leading-[1.65] text-ink-soft">
+                        Director de la Clínica del Dolor de Lima desde 2011 y
+                        con 32 años de experiencia clínica en EsSalud, formado
+                        en la Universidad Nacional Mayor de San Marcos.
+                      </p>
+                      <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-4 border-t border-ink/12 pt-5">
+                        <li>
+                          <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+                            30+ años
+                          </span>
+                          <p className="mt-1 text-[0.875rem] text-ink-soft">
+                            Manejo del dolor
+                          </p>
+                        </li>
+                        <li>
+                          <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+                            Director
+                          </span>
+                          <p className="mt-1 text-[0.875rem] text-ink-soft">
+                            Clínica del Dolor de Lima (desde 2011)
+                          </p>
+                        </li>
+                        <li>
+                          <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+                            32 años
+                          </span>
+                          <p className="mt-1 text-[0.875rem] text-ink-soft">
+                            EsSalud (desde 1994)
+                          </p>
+                        </li>
+                        <li>
+                          <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+                            UNMSM
+                          </span>
+                          <p className="mt-1 text-[0.875rem] text-ink-soft">
+                            Anestesiología · Medicina del Dolor
+                          </p>
+                        </li>
+                      </ul>
+                      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-t border-ink/12 pt-5">
+                        <a
+                          href="https://www.linkedin.com/in/victorespinozaaranguren"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-ink transition-colors hover:text-teal-deep"
+                        >
+                          LinkedIn →
+                        </a>
+                        <a
+                          href="https://www.youtube.com/@VictorIgnacioEspinozaAranguren"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-mono text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-ink transition-colors hover:text-teal-deep"
+                        >
+                          YouTube →
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </Container>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Víctor Ignacio Espinoza Aranguren",
+              jobTitle: "Director, Clínica del Dolor de Lima",
+              worksFor: {
+                "@type": "MedicalClinic",
+                name: "Clínica del Dolor de Lima",
+              },
+              alumniOf: [
+                {
+                  "@type": "CollegeOrUniversity",
+                  name: "Universidad Nacional Mayor de San Marcos",
+                },
+              ],
+              hasCredential: [
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  name: "Médico-Cirujano",
+                  credentialCategory: "degree",
+                },
+                {
+                  "@type": "EducationalOccupationalCredential",
+                  name: "Especialista en Anestesiología y Medicina del Dolor",
+                  credentialCategory: "degree",
+                },
+              ],
+              knowsAbout: [
+                { "@type": "MedicalSpecialty", name: "Anesthesiology" },
+                { "@type": "MedicalSpecialty", name: "Pain Management" },
+                { "@type": "MedicalSpecialty", name: "Palliative Care" },
+              ],
+              sameAs: [
+                "https://www.linkedin.com/in/victorespinozaaranguren",
+                "https://www.youtube.com/@VictorIgnacioEspinozaAranguren",
+              ],
+            }),
+          }}
+        />
       </section>
 
       <section className="relative overflow-hidden bg-navy py-20 text-paper sm:py-28">

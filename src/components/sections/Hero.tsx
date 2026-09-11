@@ -35,10 +35,12 @@ export default function Hero() {
               {...fade(0.12)}
               className="mt-8 font-sans text-[2.75rem] font-extrabold leading-[1.05] tracking-[-0.025em] text-navy text-balance sm:text-[3.75rem] lg:text-[4.5rem]"
             >
-              Tecnología y asesoría
+              La más alta tecnología
               <br />
-              especializada para el{" "}
-              <span className="text-teal-deep">manejo del dolor</span>
+              para el{" "}
+              <span className="text-teal-deep">manejo del dolor</span>,
+              <br />
+              al servicio de todos
             </motion.h1>
 
             <motion.p

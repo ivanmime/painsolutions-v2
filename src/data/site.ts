@@ -10,7 +10,7 @@ export const site = {
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@painsolutions.pe",
   location: "Lima, Perú",
-  founded: 2019,
+  founded: 2026,
   brand: "AVANOS",
   manufacturer: {
     name: "Avanos",
