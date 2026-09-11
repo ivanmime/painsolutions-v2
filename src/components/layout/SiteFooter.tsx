@@ -41,26 +41,52 @@ export default function SiteFooter() {
           </div>
 
           <div className="col-span-6 lg:col-span-2 lg:col-start-7">
-            <FooterCol title="Soluciones" code="01">
+            <FooterCol title="Servicios" code="01">
               <ul className="space-y-2.5 text-sm">
                 <li>
                   <Link
-                    href="/soluciones/rfa"
+                    href="/asesoria"
                     className="text-paper/80 transition-colors hover:text-teal-light"
                   >
-                    Radiofrecuencia (RFA)
+                    Asesoría
                   </Link>
                 </li>
-                {families.map((f) => (
-                  <li key={f.slug}>
-                    <Link
-                      href={`/soluciones/rfa/${f.slug}`}
-                      className="text-paper/80 transition-colors hover:text-teal-light"
-                    >
-                      {f.name}
-                    </Link>
-                  </li>
-                ))}
+                <li>
+                  <Link
+                    href="/soluciones"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
+                  >
+                    Soluciones médicas
+                  </Link>
+                  <ul className="mt-2.5 space-y-2 border-l border-paper/15 pl-4">
+                    <li>
+                      <Link
+                        href="/soluciones/rfa"
+                        className="text-[0.8125rem] text-paper/60 transition-colors hover:text-teal-light"
+                      >
+                        Radiofrecuencia (RFA)
+                      </Link>
+                    </li>
+                    {families.map((f) => (
+                      <li key={f.slug}>
+                        <Link
+                          href={`/soluciones/rfa/${f.slug}`}
+                          className="text-[0.8125rem] text-paper/60 transition-colors hover:text-teal-light"
+                        >
+                          {f.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+                <li>
+                  <Link
+                    href="/alquiler"
+                    className="text-paper/80 transition-colors hover:text-teal-light"
+                  >
+                    Alquiler
+                  </Link>
+                </li>
               </ul>
             </FooterCol>
           </div>
@@ -74,14 +100,6 @@ export default function SiteFooter() {
                     className="text-paper/80 transition-colors hover:text-teal-light"
                   >
                     Nosotros
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/asesoria"
-                    className="text-paper/80 transition-colors hover:text-teal-light"
-                  >
-                    Asesoría
                   </Link>
                 </li>
                 <li>

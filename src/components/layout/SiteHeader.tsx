@@ -4,8 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { nav, site, whatsappLink } from "@/data/site";
-import { families } from "@/data/families";
+import { nav, whatsappLink } from "@/data/site";
 import { ButtonLink } from "@/components/ui/Button";
 
 function BrandMark() {
@@ -84,8 +83,8 @@ export default function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const navRef = useRef<HTMLElement>(null);
   const closeTimer = useRef<number | null>(null);
 
   useEffect(() => {
@@ -97,7 +96,7 @@ export default function SiteHeader() {
 
   const closeAll = () => {
     setMobileOpen(false);
-    setDropdownOpen(false);
+    setOpenMenu(null);
   };
 
   useEffect(() => {
@@ -107,27 +106,27 @@ export default function SiteHeader() {
     };
   }, [mobileOpen]);
 
-  const openDropdown = () => {
+  const openDropdown = (label: string) => {
     if (closeTimer.current) {
       window.clearTimeout(closeTimer.current);
       closeTimer.current = null;
     }
-    setDropdownOpen(true);
+    setOpenMenu(label);
   };
 
   const scheduleClose = () => {
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
-    closeTimer.current = window.setTimeout(() => setDropdownOpen(false), 140);
+    closeTimer.current = window.setTimeout(() => setOpenMenu(null), 140);
   };
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setDropdownOpen(false);
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenMenu(null);
       }
     };
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setDropdownOpen(false);
+      if (e.key === "Escape") setOpenMenu(null);
     };
     document.addEventListener("click", onClick);
     document.addEventListener("keydown", onKey);
@@ -136,9 +135,6 @@ export default function SiteHeader() {
       document.removeEventListener("keydown", onKey);
     };
   }, []);
-
-  const solucionesItem = nav.find((item) => "children" in item && item.children);
-  const mainItems = nav.filter((item) => !("children" in item && item.children));
 
   return (
     <header
@@ -153,14 +149,153 @@ export default function SiteHeader() {
 
         <nav
           aria-label="Navegación principal"
+          ref={navRef}
           className="hidden items-center gap-8 lg:flex"
         >
-          {mainItems.map((item) => {
-            const active = pathname.startsWith(item.href);
+          {nav.map((item) => {
+            if (item.children) {
+              const isOpen = openMenu === item.label;
+              const active = item.children.some(
+                (group) =>
+                  pathname.startsWith(group.href) ||
+                  group.children?.some((child) =>
+                    pathname.startsWith(child.href)
+                  )
+              );
+              return (
+                <div
+                  key={item.label}
+                  className="relative"
+                  onMouseEnter={() => openDropdown(item.label)}
+                  onMouseLeave={scheduleClose}
+                >
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-haspopup="true"
+                    onClick={() => setOpenMenu(isOpen ? null : item.label)}
+                    onFocus={() => openDropdown(item.label)}
+                    onBlur={scheduleClose}
+                    className={`flex items-center gap-1.5 py-2 text-[0.9375rem] font-bold tracking-tight transition-colors ${
+                      active ? "text-navy" : "text-ink-soft hover:text-navy"
+                    }`}
+                  >
+                    {item.label}
+                    <ChevronDown
+                      className={`transition-transform duration-200 ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 6 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 4 }}
+                        transition={{ duration: 0.18 }}
+                        className="absolute left-1/2 top-full z-50 mt-4 w-[860px] -translate-x-1/2 border-2 border-navy bg-paper shadow-lift"
+                        onMouseEnter={() => openDropdown(item.label)}
+                        onMouseLeave={scheduleClose}
+                      >
+                        {/* Top band */}
+                        <div className="flex items-center justify-between border-b-2 border-navy bg-navy px-6 py-4 text-paper">
+                          <span className="font-sans text-[1rem] font-extrabold uppercase tracking-tight">
+                            {item.label}
+                          </span>
+                          <Link
+                            href={whatsappLink(
+                              "Hola, quisiera recibir información sobre los servicios de Pain Solutions."
+                            )}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-light transition-colors hover:text-paper"
+                          >
+                            Hablar por WhatsApp
+                            <ArrowOut />
+                          </Link>
+                        </div>
+
+                        {/* Service groups */}
+                        <ul className="grid grid-cols-3 gap-px bg-line">
+                          {item.children.map((group) => (
+                            <li key={group.href} className="bg-paper">
+                              <div className="flex h-full flex-col px-6 py-5">
+                                <Link
+                                  href={group.href}
+                                  onClick={closeAll}
+                                  className="group flex items-baseline justify-between gap-3 border-b border-line pb-2"
+                                >
+                                  <span className="font-sans text-[1rem] font-extrabold leading-[1.15] tracking-[-0.015em] text-navy transition-colors group-hover:text-teal-deep">
+                                    {group.label}
+                                  </span>
+                                  <span
+                                    aria-hidden="true"
+                                    className="font-mono text-[0.625rem] text-teal-deep transition-transform duration-200 group-hover:translate-x-0.5"
+                                  >
+                                    →
+                                  </span>
+                                </Link>
+                                {group.description ? (
+                                  <p className="mt-3 text-[0.8125rem] leading-[1.5] text-ink-soft">
+                                    {group.description}
+                                  </p>
+                                ) : null}
+                                {group.children ? (
+                                  <ul className="mt-4 space-y-2 border-t border-line pt-3">
+                                    {group.children.map((child) => (
+                                      <li key={child.href}>
+                                        <Link
+                                          href={child.href}
+                                          onClick={closeAll}
+                                          className="text-[0.8125rem] font-medium text-ink-soft transition-colors hover:text-teal-deep"
+                                        >
+                                          {child.label}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                ) : null}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+
+                        {/* Bottom strip · CTAs */}
+                        <div className="flex flex-col gap-3 border-t-2 border-navy bg-ice px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+                          <p className="text-[0.8125rem] text-ink-soft">
+                            ¿Necesita orientación para configurar el sistema?
+                          </p>
+                          <div className="flex items-center gap-2">
+                            <Link
+                              href="/soluciones/rfa"
+                              onClick={closeAll}
+                              className="border-2 border-navy bg-paper px-4 py-2 font-mono text-[0.625rem] font-bold uppercase tracking-[0.2em] text-navy transition-colors hover:bg-navy hover:text-paper"
+                            >
+                              Ver portafolio
+                            </Link>
+                            <Link
+                              href="/asesoria"
+                              onClick={closeAll}
+                              className="bg-navy px-4 py-2 font-mono text-[0.625rem] font-bold uppercase tracking-[0.2em] text-paper transition-colors hover:bg-ink"
+                            >
+                              Solicitar asesoría
+                            </Link>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            }
+
+            const active = item.href ? pathname.startsWith(item.href) : false;
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href ?? "#"}
                 onClick={closeAll}
                 className={`group relative inline-flex items-center py-2 text-[0.9375rem] font-bold tracking-tight transition-colors ${
                   active ? "text-navy" : "text-ink-soft hover:text-navy"
@@ -170,138 +305,12 @@ export default function SiteHeader() {
                 <span
                   aria-hidden="true"
                   className={`absolute -bottom-0.5 left-0 h-[3px] bg-teal transition-all duration-300 ${
-                    active
-                      ? "right-0"
-                      : "right-full group-hover:right-0"
+                    active ? "right-0" : "right-full group-hover:right-0"
                   }`}
                 />
               </Link>
             );
           })}
-
-          {solucionesItem && "children" in solucionesItem && solucionesItem.children ? (
-            <div
-              className="relative"
-              ref={dropdownRef}
-              onMouseEnter={openDropdown}
-              onMouseLeave={scheduleClose}
-            >
-              <button
-                type="button"
-                aria-expanded={dropdownOpen}
-                aria-haspopup="true"
-                onClick={() => setDropdownOpen((v) => !v)}
-                onFocus={openDropdown}
-                onBlur={scheduleClose}
-                className={`flex items-center gap-1.5 py-2 text-[0.9375rem] font-bold tracking-tight transition-colors ${
-                  pathname.startsWith("/soluciones")
-                    ? "text-navy"
-                    : "text-ink-soft hover:text-navy"
-                }`}
-              >
-                {solucionesItem.label}
-                <ChevronDown
-                  className={`transition-transform duration-200 ${
-                    dropdownOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              <AnimatePresence>
-                {dropdownOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 4 }}
-                    transition={{ duration: 0.18 }}
-                    className="absolute left-1/2 top-full z-50 mt-4 w-[860px] -translate-x-1/2 border-2 border-navy bg-paper shadow-lift"
-                    onMouseEnter={openDropdown}
-                    onMouseLeave={scheduleClose}
-                  >
-                    {/* Top band · manufacturer strip */}
-                    <div className="flex items-center justify-between border-b-2 border-navy bg-navy px-6 py-4 text-paper">
-                      <div className="flex items-center gap-3">
-                        <span className="font-sans text-[1rem] font-extrabold uppercase tracking-tight">
-                          {site.manufacturer.line}
-                        </span>
-                        <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-paper/60">
-                          Avanos · {site.manufacturer.frequency} kHz
-                        </span>
-                      </div>
-                      <Link
-                        href={whatsappLink(
-                          "Hola, quisiera información sobre la línea RFA Solutions de Pain Solutions."
-                        )}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-light transition-colors hover:text-paper"
-                      >
-                        Hablar por WhatsApp
-                        <ArrowOut />
-                      </Link>
-                    </div>
-
-                    {/* Family grid */}
-                    <ul className="grid grid-cols-2 gap-px bg-line">
-                      {families.map((family) => (
-                        <li key={family.slug}>
-                          <Link
-                            href={`/soluciones/rfa/${family.slug}`}
-                            onClick={closeAll}
-                            className="group block bg-paper px-6 py-5 transition-colors hover:bg-ice"
-                          >
-                            <div className="flex items-baseline justify-between gap-3 border-b border-line pb-2">
-                              <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-deep">
-                                {family.code}
-                              </span>
-                              <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
-                                {family.heroKicker}
-                              </span>
-                            </div>
-                            <h3 className="mt-3 font-sans text-[1rem] font-extrabold leading-[1.15] tracking-[-0.015em] text-navy">
-                              {family.cardTitle}
-                            </h3>
-                            <p className="mt-1.5 text-[0.8125rem] leading-[1.5] text-ink-soft">
-                              {family.cardDescription}
-                            </p>
-                            <div className="mt-3 flex items-center justify-between font-mono text-[0.625rem] uppercase tracking-[0.2em]">
-                              <span className="text-ink-muted">Ver familia</span>
-                              <span className="text-teal-deep transition-transform duration-200 group-hover:translate-x-0.5">
-                                  →
-                              </span>
-                            </div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Bottom strip · CTAs */}
-                    <div className="flex flex-col gap-3 border-t-2 border-navy bg-ice px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
-                      <p className="text-[0.8125rem] text-ink-soft">
-                        ¿Necesita orientación para configurar el sistema?
-                      </p>
-                      <div className="flex items-center gap-2">
-                        <Link
-                          href="/soluciones/rfa"
-                          onClick={closeAll}
-                          className="border-2 border-navy bg-paper px-4 py-2 font-mono text-[0.625rem] font-bold uppercase tracking-[0.2em] text-navy transition-colors hover:bg-navy hover:text-paper"
-                        >
-                          Ver portafolio
-                        </Link>
-                        <Link
-                          href="/asesoria"
-                          onClick={closeAll}
-                          className="bg-navy px-4 py-2 font-mono text-[0.625rem] font-bold uppercase tracking-[0.2em] text-paper transition-colors hover:bg-ink"
-                        >
-                          Solicitar asesoría
-                        </Link>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          ) : null}
         </nav>
 
         <div className="flex items-center gap-3">
@@ -370,32 +379,50 @@ export default function SiteHeader() {
           >
             <div className="space-y-1 px-5 py-5">
               {nav.map((item) =>
-                "children" in item && item.children ? (
-                  <div key={item.href} className="border-b border-line pb-3">
+                item.children ? (
+                  <div key={item.label} className="border-b border-line pb-3">
                     <div className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
                       {item.label}
                     </div>
                     <div className="mt-2 space-y-1">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          onClick={closeAll}
-                          className="flex items-center justify-between py-1.5 text-[0.95rem] font-bold text-ink"
-                        >
-                          <span>{child.label}</span>
-                          <span className="text-teal-deep">→</span>
-                        </Link>
+                      {item.children.map((group) => (
+                        <div key={group.href} className="py-1.5">
+                          <Link
+                            href={group.href}
+                            onClick={closeAll}
+                            className="flex items-center justify-between text-[0.95rem] font-bold text-ink"
+                          >
+                            <span>{group.label}</span>
+                            <span className="text-teal-deep">→</span>
+                          </Link>
+                          {group.children ? (
+                            <ul className="mt-1 space-y-1 border-l border-line pl-4">
+                              {group.children.map((child) => (
+                                <li key={child.href}>
+                                  <Link
+                                    href={child.href}
+                                    onClick={closeAll}
+                                    className="block py-1 text-[0.875rem] text-ink-soft"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
                       ))}
                     </div>
                   </div>
                 ) : (
                   <Link
                     key={item.href}
-                    href={item.href}
+                    href={item.href ?? "#"}
                     onClick={closeAll}
                     className={`block border-b border-line py-3 font-sans text-[1.125rem] font-bold ${
-                      pathname.startsWith(item.href) ? "text-navy" : "text-ink-soft"
+                      item.href && pathname.startsWith(item.href)
+                        ? "text-navy"
+                        : "text-ink-soft"
                     }`}
                   >
                     {item.label}

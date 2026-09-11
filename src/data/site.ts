@@ -25,22 +25,55 @@ export const site = {
   },
 } as const;
 
-export const nav = [
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
+export interface NavGroup {
+  label: string;
+  href: string;
+  description?: string;
+  children?: NavLink[];
+}
+
+export interface NavItem {
+  label: string;
+  href?: string;
+  children?: NavGroup[];
+}
+
+export const nav: NavItem[] = [
   { label: "Nosotros", href: "/nosotros" },
   {
-    label: "Soluciones médicas",
-    href: "/soluciones",
+    label: "Servicios",
     children: [
-      { label: "RFA Solutions", href: "/soluciones/rfa", description: "Ablación por radiofrecuencia" },
-      { label: "Conventional", href: "/soluciones/rfa/conventional", description: "Radiofrecuencia convencional" },
-      { label: "Cooled", href: "/soluciones/rfa/cooled", description: "Radiofrecuencia refrigerada" },
-      { label: "Tined", href: "/soluciones/rfa/tined", description: "Cánulas y sondas Tined" },
-      { label: "Equipos y accesorios", href: "/soluciones/rfa/equipos", description: "Generadores, bombas y cables" },
+      {
+        label: "Asesoría",
+        href: "/asesoria",
+        description: "Revisamos juntos las alternativas disponibles para tu requerimiento.",
+      },
+      {
+        label: "Soluciones médicas",
+        href: "/soluciones",
+        description: "Equipos, insumos y accesorios especializados.",
+        children: [
+          { label: "RFA Solutions", href: "/soluciones/rfa" },
+          { label: "Conventional", href: "/soluciones/rfa/conventional" },
+          { label: "Cooled", href: "/soluciones/rfa/cooled" },
+          { label: "Tined", href: "/soluciones/rfa/tined" },
+          { label: "Equipos y accesorios", href: "/soluciones/rfa/equipos" },
+        ],
+      },
+      {
+        label: "Alquiler",
+        href: "/alquiler",
+        description: "Accede a la tecnología sin adquirirla.",
+      },
     ],
   },
-  { label: "Asesoría", href: "/asesoria" },
   { label: "Contacto", href: "/contacto" },
-] as const;
+];
 
 export function whatsappLink(message?: string): string {
   const text = encodeURIComponent(
