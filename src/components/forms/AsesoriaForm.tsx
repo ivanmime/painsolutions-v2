@@ -5,8 +5,10 @@ import { useFormSubmit } from "./useFormSubmit";
 
 export default function AsesoriaForm({
   endpoint,
+  submitLabel = "Solicitar asesoría",
 }: {
   endpoint?: string;
+  submitLabel?: string;
 }) {
   const { status, submit } = useFormSubmit(endpoint);
 
@@ -58,7 +60,7 @@ export default function AsesoriaForm({
       <Field label="Mensaje">
         <textarea name="mensaje" rows={4} className={inputClass} />
       </Field>
-      <SubmitButton submitting={status === "submitting"} label="Solicitar asesoría" />
+      <SubmitButton submitting={status === "submitting"} label={submitLabel} />
     </form>
   );
 }
