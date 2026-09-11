@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Hero from "@/components/sections/Hero";
 import FamilyCard from "@/components/cards/FamilyCard";
 import ProductCard from "@/components/cards/ProductCard";
@@ -45,12 +46,40 @@ const steps = [
   },
 ];
 
+const partners = [
+  { name: "Avanos", logo: "/images/partners/avanos.png" },
+];
+
 export default function HomePage() {
   const featured = getFeaturedProducts().slice(0, 4);
 
   return (
     <>
       <Hero />
+
+      {/* ── Partners autorizados ───────────────────────────── */}
+      <section className="border-b border-line bg-paper">
+        <Container className="py-10 sm:py-12">
+          <Reveal>
+            <div className="flex flex-col items-center gap-8 sm:flex-row sm:justify-between">
+              <Eyebrow>Partners autorizados</Eyebrow>
+              <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+                {partners.map((partner) => (
+                  <li key={partner.name}>
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={600}
+                      height={600}
+                      className="h-14 w-48 object-cover sm:h-16 sm:w-56"
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
 
       {/* ── 02 · Manifiesto (navy full block) ──────────────── */}
       <section className="bg-navy text-paper">
