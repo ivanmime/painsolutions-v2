@@ -170,6 +170,18 @@ export default function SiteFooter() {
             </Link>
           </nav>
         </div>
+
+        <div className="mt-6 border-t border-paper/15 pt-5 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-paper/55">
+          Hecho por{" "}
+          <a
+            href="https://pinseo.tech/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-paper/80 transition-colors hover:text-teal-light"
+          >
+            Pinseo
+          </a>
+        </div>
       </Container>
     </footer>
   );
