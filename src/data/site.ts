@@ -6,9 +6,9 @@ export const site = {
   description:
     "Conectamos a profesionales e instituciones de salud con equipos, insumos y soluciones médicas de fabricantes internacionales para el manejo del dolor.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51999999999",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51932441179",
   contactEmail:
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "contacto@painsolutions.pe",
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "vicanespinoza@gmail.com",
   location: "Lima, Perú",
   founded: 2026,
   brand: "AVANOS",
@@ -77,7 +77,8 @@ export const nav: NavItem[] = [
 
 export function whatsappLink(message?: string): string {
   const text = encodeURIComponent(
-    message ?? "Hola, quisiera recibir información sobre las soluciones de Pain Solutions."
+    message ??
+      "Hola, estoy interesado(a) en conocer qué solución o servicio de Pain Solutions se adapta mejor a mi necesidad. ¿Me pueden orientar?"
   );
   return `https://wa.me/${site.whatsappNumber}?text=${text}`;
 }

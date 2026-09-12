@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
-import { whatsappLink, site } from "@/data/site";
+import { whatsappLink } from "@/data/site";
 
 const ease = [0.2, 0.7, 0.1, 1] as const;
 
@@ -47,10 +47,9 @@ export default function Hero() {
               {...fade(0.22)}
               className="mt-6 max-w-xl text-[1.0625rem] leading-[1.6] text-ink-soft"
             >
-              Distribuimos en Perú la línea completa de {site.brand} para
-              procedimientos de ablación por radiofrecuencia. Cánulas,
-              sondas, generadores y accesorios del mismo sistema, asesorados
-              por un equipo que conoce las compatibilidades técnicas del set.
+              Distribuimos en Perú soluciones médicas especializadas y
+              acompañamos a profesionales e instituciones en su elección y uso
+              adecuado.
             </motion.p>
 
             <motion.div
