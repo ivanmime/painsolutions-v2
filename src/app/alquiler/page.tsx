@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AsesoriaForm from "@/components/forms/AsesoriaForm";
+import AlquilerForm from "@/components/forms/AlquilerForm";
 import { ButtonLink } from "@/components/ui/Button";
 import {
   Container,
@@ -10,62 +10,72 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { whatsappLink } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Alquiler",
+  title: "Alquiler por procedimiento",
   description:
-    "Tecnología especializada disponible cuando la necesitas, sin necesidad de adquirir el equipo. Alquiler por procedimiento con soporte operativo.",
+    "Alquiler de la máquina BAYLIS para procedimientos que requieran esta tecnología, con soporte operativo y logístico coordinado para cada caso.",
   alternates: { canonical: "/alquiler" },
 };
+
+const WHATSAPP_ALQUILER =
+  "Hola, estoy interesado(a) en el servicio de alquiler por procedimiento con el equipo BAYLIS. Quisiera consultar disponibilidad y condiciones para un próximo caso.";
 
 const includes = [
   {
     code: "01",
-    title: "Equipo especializado",
-    text: "Disponibilidad del equipo requerido durante el tiempo necesario para el procedimiento.",
+    title: "Equipo BAYLIS",
+    text: "Disponibilidad de la máquina BAYLIS durante el tiempo coordinado para la realización del procedimiento.",
   },
   {
     code: "02",
-    title: "Personal especializado",
-    text: "Acompañamiento de personal capacitado para la operación y manejo del equipo durante el procedimiento.",
+    title: "Cánulas y consumibles",
+    text: "Revisamos las cánulas y consumibles requeridos según el procedimiento y la configuración necesaria.",
   },
   {
     code: "03",
-    title: "Traslado y logística",
-    text: "Coordinación del transporte del equipo hacia la clínica u hospital donde se realizará el procedimiento.",
+    title: "Personal capacitado",
+    text: "El servicio puede contemplar personal preparado para apoyar en la operación y manejo del equipo durante el procedimiento.",
   },
   {
     code: "04",
-    title: "Consumibles necesarios",
-    text: "Según el procedimiento, el servicio puede contemplar los consumibles asociados, como cánulas y electrodos.",
+    title: "Traslado y logística",
+    text: "Coordinamos el traslado del equipo hasta la clínica, hospital o institución donde se realizará el procedimiento.",
   },
 ];
 
 const steps = [
   {
     number: "01",
-    title: "Cuéntanos qué necesitas",
-    text: "Indícanos el procedimiento, institución y fecha estimada.",
+    title: "Cuéntanos sobre el procedimiento",
+    text: "Compártenos qué procedimiento necesitas realizar, la fecha estimada y dónde se llevará a cabo.",
   },
   {
     number: "02",
-    title: "Revisamos la configuración",
-    text: "Confirmamos el equipo y los componentes necesarios para el caso.",
+    title: "Revisamos la configuración necesaria",
+    text: "Identificamos el equipo, las cánulas y los componentes requeridos para preparar el servicio.",
   },
   {
     number: "03",
-    title: "Coordinamos disponibilidad y traslado",
-    text: "Organizamos el equipo, personal y logística para el procedimiento.",
+    title: "Evaluamos ubicación y logística",
+    text: "Revisamos la clínica u hospital donde se realizará el procedimiento y coordinamos el traslado de acuerdo con la ubicación y distancia.",
   },
   {
     number: "04",
-    title: "Acompañamos el procedimiento",
-    text: "El equipo permanece disponible durante el tiempo coordinado para su realización.",
+    title: "Confirmamos disponibilidad y cotización",
+    text: "Preparamos una propuesta considerando el equipo, consumibles, personal y logística necesarios para el caso.",
+  },
+  {
+    number: "05",
+    title: "Coordinamos el procedimiento",
+    text: "El equipo y el soporte acordado estarán disponibles durante el tiempo coordinado para su realización.",
   },
 ];
 
-const situations = [
-  "médicos que requieren el equipo para un procedimiento específico;",
-  "clínicas u hospitales que necesitan acceso puntual a la tecnología;",
-  "profesionales que todavía no justifican la compra de un equipo propio.",
+const quoteItems = [
+  "Equipo BAYLIS",
+  "Cánulas y consumibles",
+  "Personal requerido",
+  "Lugar del procedimiento",
+  "Distancia y logística",
 ];
 
 export default function AlquilerPage() {
@@ -89,9 +99,9 @@ export default function AlquilerPage() {
               </Reveal>
               <Reveal delay={0.15}>
                 <p className="mt-6 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
-                  Ponemos a disposición el equipo requerido para el
-                  procedimiento junto con el soporte operativo necesario para
-                  su uso, coordinando cada caso de forma personalizada.
+                  Coordinamos el alquiler de la máquina BAYLIS para
+                  procedimientos que requieran esta tecnología, junto con el
+                  soporte operativo y logístico necesario para cada caso.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
@@ -100,13 +110,11 @@ export default function AlquilerPage() {
                     Consultar disponibilidad
                   </ButtonLink>
                   <ButtonLink
-                    href={whatsappLink(
-                      "Hola, quisiera consultar la disponibilidad de alquiler por procedimiento de Pain Solutions."
-                    )}
+                    href={whatsappLink(WHATSAPP_ALQUILER)}
                     external
                     variant="outline-dark"
                   >
-                    Escribir por WhatsApp
+                    Hablar por WhatsApp
                   </ButtonLink>
                 </div>
               </Reveal>
@@ -121,9 +129,15 @@ export default function AlquilerPage() {
             <SectionHeading
               eyebrow="Qué incluye el servicio"
               number="AL.01"
-              title="Más que el alquiler de un equipo"
-              description="El servicio se organiza por procedimiento e integra los elementos necesarios para poder trasladar y utilizar la tecnología en la institución donde se realizará."
-            />
+              title="Una solución coordinada para cada procedimiento"
+              description="El servicio de alquiler se organiza de acuerdo con las características del procedimiento, la configuración requerida y el lugar donde se realizará."
+            >
+              <p className="mt-4 text-[1.0625rem] leading-[1.65] text-ink-soft">
+                No se trata únicamente de disponer del equipo: coordinamos los
+                elementos necesarios para que la tecnología pueda estar
+                disponible durante el procedimiento.
+              </p>
+            </SectionHeading>
           </Reveal>
           <Stagger className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
             {includes.map((item) => (
@@ -148,6 +162,12 @@ export default function AlquilerPage() {
               </StaggerItem>
             ))}
           </Stagger>
+          <Reveal delay={0.1}>
+            <p className="mt-6 border-l-2 border-teal pl-4 text-[0.9375rem] leading-[1.6] text-ink-muted">
+              Las condiciones logísticas pueden variar de acuerdo con la
+              ubicación y distancia.
+            </p>
+          </Reveal>
         </Container>
       </section>
 
@@ -155,33 +175,33 @@ export default function AlquilerPage() {
         <Container>
           <Reveal>
             <SectionHeading
-              eyebrow="Cómo funciona"
+              eyebrow="El proceso"
               number="AL.02"
-              title="Coordinamos cada alquiler según el procedimiento"
+              title="¿Cómo funciona?"
             />
           </Reveal>
-          <Stagger className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step) => (
-              <StaggerItem key={step.number} className="h-full">
-                <div className="flex h-full flex-col bg-paper p-7">
-                  <div className="flex items-baseline justify-between border-b border-ink/12 pb-4">
-                    <span className="font-mono text-[0.625rem] tracking-[0.2em] text-ink-muted">
-                      PASO {step.number}
-                    </span>
-                    <span className="font-mono text-[0.625rem] tracking-[0.2em] text-ink-muted">
-                      {step.number}/04
-                    </span>
-                  </div>
-                  <h3 className="mt-6 font-display text-[1.375rem] font-medium leading-[1.15] tracking-[-0.01em] text-ink">
+          <ol className="mt-12 border-y-2 border-navy">
+            {steps.map((step, index) => (
+              <Reveal
+                as="li"
+                key={step.number}
+                delay={index * 0.05}
+                className="border-b border-line last:border-b-0"
+              >
+                <div className="grid grid-cols-12 items-baseline gap-x-6 gap-y-2 py-7">
+                  <span className="col-span-12 font-mono text-[0.6875rem] tracking-[0.2em] text-teal-deep sm:col-span-2">
+                    {step.number}
+                  </span>
+                  <h3 className="col-span-12 font-display text-[1.375rem] font-medium leading-[1.15] tracking-[-0.01em] text-ink sm:col-span-4">
                     {step.title}
                   </h3>
-                  <p className="mt-3 text-[0.9375rem] leading-[1.6] text-ink-soft">
+                  <p className="col-span-12 text-[0.9375rem] leading-[1.6] text-ink-soft sm:col-span-6">
                     {step.text}
                   </p>
                 </div>
-              </StaggerItem>
+              </Reveal>
             ))}
-          </Stagger>
+          </ol>
         </Container>
       </section>
 
@@ -194,34 +214,25 @@ export default function AlquilerPage() {
                   eyebrow="Para quién puede ser útil"
                   number="AL.03"
                   title="Una alternativa a la compra para necesidades puntuales"
-                  description="Pensado para profesionales e instituciones que necesitan acceder a tecnología especializada para uno o varios procedimientos sin adquirir inmediatamente el equipo."
                 />
               </Reveal>
             </div>
             <div className="col-span-12 lg:col-span-7">
               <Reveal delay={0.1}>
-                <p className="font-mono text-[0.6875rem] uppercase tracking-[0.2em] text-ink-muted">
-                  Ejemplos de situaciones que sí están alineadas con lo
-                  conversado:
+                <p className="text-[1.0625rem] leading-[1.65] text-ink-soft">
+                  El alquiler por procedimiento está pensado para profesionales
+                  e instituciones que necesitan acceder a tecnología
+                  especializada para uno o varios casos sin adquirir
+                  inmediatamente el equipo.
                 </p>
-                <ul className="mt-6 divide-y divide-ink/10 border-y-2 border-ink">
-                  {situations.map((situation) => (
-                    <li
-                      key={situation}
-                      className="flex items-baseline gap-4 py-5"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="font-mono text-[0.625rem] text-teal-deep"
-                      >
-                        →
-                      </span>
-                      <span className="text-[1.0625rem] leading-[1.6] text-ink-soft">
-                        {situation}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+              </Reveal>
+              <Reveal delay={0.15}>
+                <p className="mt-5 text-[1.0625rem] leading-[1.65] text-ink-soft">
+                  Puede ser una alternativa cuando necesitas utilizar la
+                  tecnología para un procedimiento específico, cubrir una
+                  necesidad puntual o evaluar la solución antes de considerar
+                  una compra.
+                </p>
               </Reveal>
             </div>
           </div>
@@ -234,11 +245,23 @@ export default function AlquilerPage() {
             <div className="col-span-12 lg:col-span-7">
               <Reveal>
                 <SectionHeading
-                  eyebrow="Alquiler adaptado a cada caso"
+                  eyebrow="Cotización personalizada por procedimiento"
                   number="AL.04"
-                  title="Cada procedimiento requiere una coordinación diferente"
-                  description="La cotización se prepara según el equipo requerido, consumibles, logística, personal necesario y características del procedimiento."
+                  title="Cada caso requiere una coordinación diferente"
+                  description="La cotización se prepara considerando:"
                 />
+              </Reveal>
+              <Reveal delay={0.1}>
+                <ul className="mt-6 flex flex-wrap gap-2">
+                  {quoteItems.map((item) => (
+                    <li
+                      key={item}
+                      className="border border-ink/15 bg-paper px-3 py-2 font-mono text-[0.6875rem] uppercase tracking-[0.15em] text-ink-soft"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </Reveal>
             </div>
             <div className="col-span-12 flex items-end lg:col-span-5 lg:justify-end">
@@ -261,13 +284,14 @@ export default function AlquilerPage() {
                   ¿Tienes varios procedimientos programados?
                 </h2>
                 <p className="mt-5 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
-                  Podemos revisar contigo la mejor forma de coordinar la
-                  disponibilidad del equipo para más de un procedimiento.
+                  Si necesitas el equipo para más de un procedimiento, podemos
+                  revisar contigo la mejor forma de coordinar disponibilidad,
+                  consumibles y logística.
                 </p>
               </div>
               <div className="col-span-12 flex flex-wrap items-center gap-3 lg:col-span-4 lg:justify-end">
                 <ButtonLink href="#solicitar" variant="outline-dark">
-                  Hablar con nuestro equipo
+                  Consultar disponibilidad
                 </ButtonLink>
               </div>
             </div>
@@ -275,63 +299,56 @@ export default function AlquilerPage() {
         </Container>
       </section>
 
-      <section className="relative overflow-hidden bg-navy py-20 text-paper sm:py-28">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 opacity-15"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, rgb(255 255 255 / 0.4) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / 0.4) 1px, transparent 1px)",
-            backgroundSize: "32px 32px",
-          }}
-        />
-        <Container className="relative">
-          <Reveal>
-            <div className="grid grid-cols-12 gap-x-6 gap-y-10">
-              <div className="col-span-12 lg:col-span-8">
-                <Eyebrow light number="AL.05">
-                  Alquiler por procedimiento
-                </Eyebrow>
-                <h2 className="mt-6 font-display text-[2.25rem] font-medium leading-[1.1] tracking-[-0.015em] text-balance sm:text-[3rem] lg:text-[3.75rem]">
-                  ¿Necesitas un equipo para un próximo procedimiento?
-                </h2>
-                <p className="mt-6 max-w-2xl text-[1.0625rem] leading-[1.65] text-paper/75">
-                  Cuéntanos qué necesitas y coordinaremos contigo la
-                  disponibilidad, configuración y logística del servicio.
-                </p>
-              </div>
-              <div className="col-span-12 flex flex-wrap items-center gap-3 lg:col-span-4 lg:justify-end">
-                <ButtonLink href="#solicitar" variant="light">
-                  Consultar alquiler por procedimiento
-                </ButtonLink>
-              </div>
-            </div>
-          </Reveal>
-        </Container>
-      </section>
-
-      <section id="solicitar" className="scroll-mt-24 py-20 sm:py-24">
+      <section
+        id="solicitar"
+        className="scroll-mt-24 border-t border-line bg-paper py-20 sm:py-24"
+      >
         <Container>
           <div className="grid grid-cols-12 gap-x-6 gap-y-12">
             <div className="col-span-12 lg:col-span-5">
               <Reveal>
                 <SectionHeading
-                  eyebrow="Consultar disponibilidad"
-                  number="AL.06"
-                  title="Cuéntanos qué necesitas"
-                  description="Completa el formulario y nuestro equipo se pondrá en contacto contigo para coordinar la disponibilidad, configuración y logística del servicio."
+                  eyebrow="Solicita información sobre alquiler"
+                  number="AL.05"
+                  title="¿Necesitas la máquina BAYLIS para un próximo procedimiento?"
+                  description="Déjanos los datos principales del caso y nuestro equipo se pondrá en contacto contigo para revisar disponibilidad, configuración y condiciones del servicio."
                 />
               </Reveal>
             </div>
             <div className="col-span-12 lg:col-span-7">
               <Reveal delay={0.1}>
                 <div className="border border-ink/12 bg-paper p-6 sm:p-10">
-                  <AsesoriaForm
+                  <AlquilerForm
                     endpoint={process.env.NEXT_PUBLIC_FORMSPREE_ASESORIA}
-                    submitLabel="Consultar disponibilidad"
                   />
                 </div>
               </Reveal>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-line bg-ice/40 py-20 sm:py-24">
+        <Container>
+          <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8">
+            <div className="col-span-12 lg:col-span-8">
+              <Eyebrow number="AL.06">Alquiler por procedimiento</Eyebrow>
+              <h2 className="mt-6 font-display text-[1.75rem] font-medium leading-[1.15] tracking-[-0.015em] text-ink text-balance sm:text-[2.25rem]">
+                ¿Prefieres hablar directamente con nosotros?
+              </h2>
+              <p className="mt-5 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
+                También puedes escribirnos por WhatsApp para consultar
+                disponibilidad o contarnos sobre tu próximo procedimiento.
+              </p>
+            </div>
+            <div className="col-span-12 flex flex-wrap items-center gap-3 lg:col-span-4 lg:justify-end">
+              <ButtonLink
+                href={whatsappLink(WHATSAPP_ALQUILER)}
+                external
+                variant="primary"
+              >
+                Consultar por WhatsApp
+              </ButtonLink>
             </div>
           </div>
         </Container>
