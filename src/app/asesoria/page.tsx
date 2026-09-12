@@ -57,10 +57,10 @@ const topics = [
 ];
 
 const uses = [
-  "resolver dudas específicas;",
-  "reforzar capacitaciones;",
-  "revisar configuraciones;",
-  "acompañar la adopción del equipo por parte del equipo clínico o técnico;",
+  "resolver dudas específicas.",
+  "reforzar capacitaciones.",
+  "revisar configuraciones.",
+  "acompañar la adopción del equipo por parte del equipo clínico o técnico.",
   "ampliar el soporte después de las horas incluidas en la postventa.",
 ];
 
