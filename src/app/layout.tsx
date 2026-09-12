@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-  axes: ["opsz", "SOFT"],
-});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -82,7 +75,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-PE"
-      className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable}`}
+      className={`${inter.variable} ${jetbrains.variable}`}
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col antialiased" suppressHydrationWarning>

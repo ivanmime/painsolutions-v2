@@ -6,6 +6,7 @@ import {
   Eyebrow,
   SectionHeading,
 } from "@/components/ui/Layout";
+import { PageHero } from "@/components/ui/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { whatsappLink } from "@/data/site";
 
@@ -81,49 +82,40 @@ const quoteItems = [
 export default function AlquilerPage() {
   return (
     <>
-      <section className="border-b border-line bg-paper">
-        <Container className="pt-12 pb-16 sm:pt-16 sm:pb-20">
-          <div className="grid grid-cols-12 gap-x-6 gap-y-10">
-            <div className="col-span-12 lg:col-span-8">
-              <Reveal>
-                <Eyebrow number="AL.00">Alquiler</Eyebrow>
-                <h1 className="mt-6 font-display text-[2.5rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink text-balance sm:text-[3.5rem] lg:text-[4.5rem]">
-                  Alquiler por procedimiento
-                </h1>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <p className="mt-7 max-w-2xl font-display text-[1.375rem] font-medium leading-[1.3] tracking-[-0.01em] text-ink text-balance sm:text-[1.625rem]">
-                  Tecnología especializada disponible cuando la necesitas, sin
-                  necesidad de adquirir el equipo.
-                </p>
-              </Reveal>
-              <Reveal delay={0.15}>
-                <p className="mt-6 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
-                  Coordinamos el alquiler de la máquina BAYLIS para
-                  procedimientos que requieran esta tecnología, junto con el
-                  soporte operativo y logístico necesario para cada caso.
-                </p>
-              </Reveal>
-              <Reveal delay={0.2}>
-                <div className="mt-9 flex flex-wrap items-center gap-3">
-                  <ButtonLink href="#solicitar" variant="primary">
-                    Consultar disponibilidad
-                  </ButtonLink>
-                  <ButtonLink
-                    href={whatsappLink(WHATSAPP_ALQUILER)}
-                    external
-                    variant="outline-dark"
-                  >
-                    Hablar por WhatsApp
-                  </ButtonLink>
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        number="AL.00"
+        eyebrow="Alquiler"
+        title="Alquiler por procedimiento"
+        lead={
+          <>
+            <p>
+              Tecnología especializada disponible cuando la necesitas, sin
+              necesidad de adquirir el equipo.
+            </p>
+            <p>
+              Coordinamos el alquiler de la máquina BAYLIS para procedimientos
+              que requieran esta tecnología, junto con el soporte operativo y
+              logístico necesario para cada caso.
+            </p>
+          </>
+        }
+        actions={
+          <>
+            <ButtonLink href="#solicitar" variant="primary">
+              Consultar disponibilidad
+            </ButtonLink>
+            <ButtonLink
+              href={whatsappLink(WHATSAPP_ALQUILER)}
+              external
+              variant="outline-dark"
+            >
+              Hablar por WhatsApp
+            </ButtonLink>
+          </>
+        }
+      />
 
-      <section className="py-20 sm:py-24">
+      <section className="py-20 sm:py-28">
         <Container>
           <Reveal>
             <SectionHeading
@@ -139,11 +131,11 @@ export default function AlquilerPage() {
               </p>
             </SectionHeading>
           </Reveal>
-          <Stagger className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {includes.map((item) => (
               <StaggerItem key={item.code} className="h-full">
-                <div className="flex h-full flex-col bg-paper p-7">
-                  <div className="flex items-baseline justify-between border-b border-ink/12 pb-4">
+                <div className="flex h-full flex-col border-2 border-ink bg-paper p-6">
+                  <div className="flex items-baseline justify-between border-b-2 border-ink pb-4">
                     <span className="font-mono text-[0.625rem] tracking-[0.2em] text-ink-muted">
                       {item.code} / 04
                     </span>
@@ -152,7 +144,7 @@ export default function AlquilerPage() {
                       className="inline-block h-px w-6 bg-ink/30"
                     />
                   </div>
-                  <h3 className="mt-6 font-display text-[1.375rem] font-medium leading-[1.15] tracking-[-0.01em] text-ink">
+                  <h3 className="mt-6 heading-tile text-[1.375rem] text-navy">
                     {item.title}
                   </h3>
                   <p className="mt-3 text-[0.9375rem] leading-[1.6] text-ink-soft">
@@ -171,7 +163,7 @@ export default function AlquilerPage() {
         </Container>
       </section>
 
-      <section className="border-y border-line bg-ice/40 py-20 sm:py-24">
+      <section className="border-y border-line bg-ice/50 py-20 sm:py-28">
         <Container>
           <Reveal>
             <SectionHeading
@@ -192,7 +184,7 @@ export default function AlquilerPage() {
                   <span className="col-span-12 font-mono text-[0.6875rem] tracking-[0.2em] text-teal-deep sm:col-span-2">
                     {step.number}
                   </span>
-                  <h3 className="col-span-12 font-display text-[1.375rem] font-medium leading-[1.15] tracking-[-0.01em] text-ink sm:col-span-4">
+                  <h3 className="col-span-12 heading-tile text-[1.375rem] text-navy sm:col-span-4">
                     {step.title}
                   </h3>
                   <p className="col-span-12 text-[0.9375rem] leading-[1.6] text-ink-soft sm:col-span-6">
@@ -205,7 +197,7 @@ export default function AlquilerPage() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="py-20 sm:py-28">
         <Container>
           <div className="grid grid-cols-12 gap-x-6 gap-y-12">
             <div className="col-span-12 lg:col-span-5">
@@ -239,7 +231,7 @@ export default function AlquilerPage() {
         </Container>
       </section>
 
-      <section className="border-t border-line bg-ice/40 py-20 sm:py-24">
+      <section className="border-t border-line bg-ice/50 py-20 sm:py-28">
         <Container>
           <div className="grid grid-cols-12 gap-x-6 gap-y-12">
             <div className="col-span-12 lg:col-span-7">
@@ -275,12 +267,12 @@ export default function AlquilerPage() {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="py-20 sm:py-28">
         <Container>
           <Reveal>
             <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8 border-2 border-ink bg-paper p-8 sm:p-10">
               <div className="col-span-12 lg:col-span-8">
-                <h2 className="font-sans text-[1.75rem] font-extrabold leading-[1.1] tracking-[-0.02em] text-navy text-balance sm:text-[2.25rem]">
+                <h2 className="heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
                   ¿Tienes varios procedimientos programados?
                 </h2>
                 <p className="mt-5 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
@@ -301,7 +293,7 @@ export default function AlquilerPage() {
 
       <section
         id="solicitar"
-        className="scroll-mt-24 border-t border-line bg-paper py-20 sm:py-24"
+        className="scroll-mt-24 border-t border-line bg-paper py-20 sm:py-28"
       >
         <Container>
           <div className="grid grid-cols-12 gap-x-6 gap-y-12">
@@ -317,7 +309,7 @@ export default function AlquilerPage() {
             </div>
             <div className="col-span-12 lg:col-span-7">
               <Reveal delay={0.1}>
-                <div className="border border-ink/12 bg-paper p-6 sm:p-10">
+                <div className="border-2 border-ink bg-paper p-6 sm:p-10">
                   <AlquilerForm
                     endpoint={process.env.NEXT_PUBLIC_FORMSPREE_ASESORIA}
                   />
@@ -328,12 +320,12 @@ export default function AlquilerPage() {
         </Container>
       </section>
 
-      <section className="border-t border-line bg-ice/40 py-20 sm:py-24">
+      <section className="border-t border-line bg-ice/50 py-20 sm:py-28">
         <Container>
           <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8">
             <div className="col-span-12 lg:col-span-8">
               <Eyebrow number="AL.06">Alquiler por procedimiento</Eyebrow>
-              <h2 className="mt-6 font-display text-[1.75rem] font-medium leading-[1.15] tracking-[-0.015em] text-ink text-balance sm:text-[2.25rem]">
+              <h2 className="mt-6 heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
                 ¿Prefieres hablar directamente con nosotros?
               </h2>
               <p className="mt-5 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">

@@ -30,7 +30,7 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-deep">
             {product.productType} · {family?.shortName}
           </p>
-          <h3 className="mt-2 font-sans text-[1.125rem] font-extrabold leading-[1.2] tracking-[-0.015em] text-navy">
+          <h3 className="mt-2 heading-tile text-[1.125rem] text-navy">
             {product.name}
           </h3>
           <p className="mt-2 line-clamp-2 text-[0.8125rem] leading-[1.55] text-ink-soft">

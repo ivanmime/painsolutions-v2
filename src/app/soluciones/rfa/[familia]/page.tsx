@@ -66,7 +66,7 @@ export default async function FamilyPage({ params }: PageProps) {
                 <Eyebrow number={family.code}>
                   {family.heroKicker}
                 </Eyebrow>
-                <h1 className="mt-6 font-display text-[2.5rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink text-balance sm:text-[3.5rem] lg:text-[4rem]">
+                <h1 className="mt-6 heading-page text-[2.5rem] text-navy sm:text-[3.25rem] lg:text-[clamp(2.5rem,3.8vw,3.75rem)]">
                   {family.name}
                 </h1>
                 <p className="mt-7 max-w-xl text-[1.0625rem] leading-[1.65] text-ink-soft">
@@ -90,8 +90,8 @@ export default async function FamilyPage({ params }: PageProps) {
             </div>
             <div className="col-span-12 lg:col-span-5">
               <Reveal delay={0.15}>
-                <div className="border border-ink/12 bg-ice/40">
-                  <div className="flex items-center justify-between border-b border-ink/12 px-5 py-3 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+                <div className="border-2 border-ink bg-ice/50">
+                  <div className="flex items-center justify-between border-b border-line px-5 py-3 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
                     <span>Especificaciones</span>
                     <span>{site.brand}</span>
                   </div>
@@ -104,7 +104,7 @@ export default async function FamilyPage({ params }: PageProps) {
                         <dt className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
                           {spec.label}
                         </dt>
-                        <dd className="font-display text-[1rem] font-medium text-ink">
+                        <dd className="font-sans text-[1rem] font-bold text-navy">
                           {spec.value}
                         </dd>
                       </div>
@@ -117,7 +117,7 @@ export default async function FamilyPage({ params }: PageProps) {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="py-20 sm:py-28">
         <Container>
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 lg:col-span-4">
@@ -141,7 +141,7 @@ export default async function FamilyPage({ params }: PageProps) {
         </Container>
       </section>
 
-      <section className="border-y border-line bg-navy py-12 text-paper">
+      <section className="border-y border-line bg-teal py-12 text-paper">
         <Container>
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             <Stat
@@ -162,7 +162,7 @@ export default async function FamilyPage({ params }: PageProps) {
         </Container>
       </section>
 
-      <section className="py-20 sm:py-24">
+      <section className="py-20 sm:py-28">
         <Container>
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
             <Reveal>
@@ -181,14 +181,14 @@ export default async function FamilyPage({ params }: PageProps) {
           </div>
 
           {items.length > 0 ? (
-            <Stagger className="mt-12 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+            <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {items.map((product) => (
                 <ProductCard key={product.slug} product={product} />
               ))}
             </Stagger>
           ) : (
             <Reveal>
-              <p className="mt-12 border border-ink/12 bg-paper p-8 text-ink-soft">
+              <p className="mt-12 border-2 border-ink bg-paper p-8 text-ink-soft">
                 Aún no hay referencias publicadas en esta familia.{" "}
                 <a
                   href="/contacto"
@@ -203,12 +203,12 @@ export default async function FamilyPage({ params }: PageProps) {
         </Container>
       </section>
 
-      <section className="bg-navy-deep py-16 text-paper sm:py-20">
+      <section className="bg-teal-deep py-16 text-paper sm:py-20">
         <Container>
           <Reveal>
             <div className="grid grid-cols-12 gap-x-6 gap-y-8">
               <div className="col-span-12 lg:col-span-8">
-                <p className="font-display text-[1.75rem] font-medium leading-[1.15] text-balance sm:text-[2.5rem]">
+                <p className="heading-section text-[1.75rem] text-paper sm:text-[2.5rem]">
                   ¿Dudas sobre compatibilidad con tu generador o bomba actual?
                 </p>
                 <p className="mt-4 max-w-2xl text-[1rem] leading-[1.6] text-paper/70">

@@ -84,7 +84,7 @@ export function SectionHeading({
     >
       {eyebrow ? <Eyebrow light={light} number={number}>{eyebrow}</Eyebrow> : null}
       <h2
-        className={`mt-6 font-sans text-[2rem] font-extrabold leading-[1.05] tracking-[-0.025em] text-balance sm:text-[2.5rem] lg:text-[3.25rem] ${
+        className={`mt-6 heading-section text-[2rem] sm:text-[2.5rem] lg:text-[3.25rem] ${
           light ? "text-paper" : "text-navy"
         }`}
       >

@@ -9,7 +9,6 @@
   /* ── Brand palette ────────────────────────────────────── */
   --color-paper: #ffffff;
   --color-ice: #ebf9fa;
-  --color-ice-deep: #d7ecee;
   --color-teal: #1a8290;           /* brand teal — fills with white text */
   --color-teal-light: #63c6cf;     /* teal accent on dark backgrounds */
   --color-teal-deep: #016c7c;
@@ -22,20 +21,51 @@
   --color-ink-soft: #1f3358;
   --color-ink-muted: #4a5b72;
   --color-line: #d9e8ea;
-  --color-line-strong: #b6c8ca;
 
   /* ── Typography ───────────────────────────────────────── */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
 
   /* ── Shadows ──────────────────────────────────────────── */
-  --shadow-card: 0 1px 0 rgb(7 49 109 / 0.04), 0 8px 24px rgb(7 49 109 / 0.06);
   --shadow-lift: 0 2px 4px rgb(7 49 109 / 0.06), 0 20px 48px -12px rgb(7 49 109 / 0.20);
 
   /* ── Motion ───────────────────────────────────────────── */
   --ease-editorial: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
+/* ─────────────────────────────────────────────────────────
+   Canonical type scale — single source of truth for headings.
+   Color is intentionally not baked in; pass text-navy or
+   text-paper alongside so state overrides keep working.
+   ───────────────────────────────────────────────────────── */
+@utility heading-page {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+@utility heading-section {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+@utility heading-tile {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+@utility lead {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-ink-soft);
 }
 
 html {
@@ -81,19 +111,4 @@ body {
 
 .text-pretty {
   text-wrap: pretty;
-}
-
-.hairline-b {
-  border-bottom: 1px solid var(--color-line);
-}
-.hairline-t {
-  border-top: 1px solid var(--color-line);
-}
-
-.paper-grain {
-  background-image:
-    radial-gradient(ellipse 1px 1px at 25% 30%, rgb(7 49 109 / 0.025) 50%, transparent 51%),
-    radial-gradient(ellipse 1px 1px at 75% 65%, rgb(61 164 171 / 0.04) 50%, transparent 51%);
-  background-size: 7px 7px, 11px 11px;
-  background-position: 0 0, 3px 3px;
 }

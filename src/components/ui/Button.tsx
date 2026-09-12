@@ -5,9 +5,6 @@ import type { Url } from "url";
 type Variant =
   | "primary"
   | "primary-light"
-  | "secondary"
-  | "secondary-light"
-  | "ghost"
   | "outline-dark"
   | "outline-light"
   | "light";
@@ -18,9 +15,6 @@ const base =
 const variants: Record<Variant, string> = {
   primary: "bg-navy text-paper hover:bg-ink",
   "primary-light": "bg-teal text-paper hover:bg-teal-deep",
-  secondary: "bg-paper text-navy hover:bg-ice",
-  "secondary-light": "bg-paper text-navy hover:bg-ice",
-  ghost: "text-navy hover:text-teal-deep",
   "outline-dark":
     "border-2 border-navy text-navy hover:bg-navy hover:text-paper",
   "outline-light":

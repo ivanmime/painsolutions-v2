@@ -20,7 +20,7 @@ export function FamilyCard({ family }: { family: Family }) {
         </div>
 
         {/* Title */}
-        <h3 className="mt-6 font-sans text-[1.375rem] font-extrabold leading-[1.1] tracking-[-0.02em] text-navy text-balance group-hover:text-paper">
+        <h3 className="mt-6 heading-tile text-[1.375rem] text-navy group-hover:text-paper">
           {family.cardTitle}
         </h3>
         <p className="mt-3 flex-1 text-[0.9375rem] leading-[1.6] text-ink-soft group-hover:text-paper/80">

@@ -7,6 +7,8 @@ import {
   SectionHeading,
   Stat,
 } from "@/components/ui/Layout";
+import { GridOverlay } from "@/components/ui/GridOverlay";
+import { PageHero } from "@/components/ui/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
@@ -42,27 +44,12 @@ const pillars = [
 export default function NosotrosPage() {
   return (
     <>
-      <section className="border-b border-line bg-paper">
-        <Container className="pt-12 pb-16 sm:pt-16 sm:pb-20">
-          <div className="grid grid-cols-12 gap-x-6 gap-y-10">
-            <div className="col-span-12">
-              <Reveal>
-                <Eyebrow number="N.01">Pain Solutions</Eyebrow>
-                <h1 className="mt-6 font-display text-[2.5rem] font-medium leading-[1.05] tracking-[-0.02em] text-ink text-balance sm:text-[3.5rem] lg:text-[4.5rem]">
-                  Tecnología médica con acompañamiento especializado
-                </h1>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <p className="mt-7 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
-                  Facilitamos el acceso de profesionales e instituciones de
-                  salud a soluciones tecnológicas especializadas para el
-                  manejo del dolor.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <PageHero
+        number="N.01"
+        eyebrow="Pain Solutions"
+        title="Tecnología médica con acompañamiento especializado"
+        lead="Facilitamos el acceso de profesionales e instituciones de salud a soluciones tecnológicas especializadas para el manejo del dolor."
+      />
 
       <section className="py-20 sm:py-28">
         <Container>
@@ -74,7 +61,7 @@ export default function NosotrosPage() {
             </div>
             <div className="col-span-12 lg:col-span-8">
               <Reveal delay={0.1}>
-                <p className="font-display text-[1.75rem] font-medium leading-[1.2] tracking-[-0.01em] text-ink text-balance sm:text-[2.25rem]">
+                <p className="heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
                   Conectamos necesidades médicas con tecnología
                   especializada
                 </p>
@@ -94,7 +81,7 @@ export default function NosotrosPage() {
         </Container>
       </section>
 
-      <section className="border-y border-line bg-ink py-14 text-paper sm:py-16">
+      <section className="border-y border-line bg-teal py-14 text-paper sm:py-16">
         <Container>
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             <Stat value="30+" label="Años" hint="Manejo del dolor" light />
@@ -115,11 +102,11 @@ export default function NosotrosPage() {
               description="El proceso detrás de cada cotización que entregamos."
             />
           </Reveal>
-          <Stagger className="mt-14 grid gap-px bg-ink/10 sm:grid-cols-2 lg:grid-cols-4">
+          <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {pillars.map((pillar) => (
               <StaggerItem key={pillar.code} className="h-full">
-                <div className="flex h-full flex-col bg-paper p-7">
-                  <div className="flex items-baseline justify-between border-b border-ink/12 pb-4">
+                <div className="flex h-full flex-col border-2 border-ink bg-paper p-6">
+                  <div className="flex items-baseline justify-between border-b-2 border-ink pb-4">
                     <span className="font-mono text-[0.625rem] tracking-[0.2em] text-ink-muted">
                       {pillar.code} / 04
                     </span>
@@ -128,7 +115,7 @@ export default function NosotrosPage() {
                       className="inline-block h-px w-6 bg-ink/30"
                     />
                   </div>
-                  <h3 className="mt-6 font-display text-[1.375rem] font-medium leading-[1.15] tracking-[-0.01em] text-ink">
+                  <h3 className="mt-6 heading-tile text-[1.375rem] text-navy">
                     {pillar.title}
                   </h3>
                   <p className="mt-3 text-[0.9375rem] leading-[1.6] text-ink-soft">
@@ -147,15 +134,12 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 lg:col-span-5">
               <Reveal>
-                <Eyebrow number="N.04">Referente médico</Eyebrow>
-                <h2 className="mt-6 font-display text-[2rem] font-medium leading-[1.1] tracking-[-0.02em] text-ink text-balance sm:text-[2.5rem] lg:text-[3rem]">
-                  Una mirada clínica detrás de cada solución.
-                </h2>
-                <p className="mt-6 max-w-xl text-[1.0625rem] leading-[1.65] text-ink-soft">
-                  La experiencia médica que respalda el conocimiento que Pain
-                  Solutions acerca a profesionales e instituciones para la
-                  elección y el uso adecuado de cada solución.
-                </p>
+                <SectionHeading
+                  eyebrow="Referente médico"
+                  number="N.04"
+                  title="Una mirada clínica detrás de cada solución."
+                  description="La experiencia médica que respalda el conocimiento que Pain Solutions acerca a profesionales e instituciones para la elección y el uso adecuado de cada solución."
+                />
               </Reveal>
             </div>
             <div className="col-span-12 lg:col-span-7">
@@ -172,7 +156,7 @@ export default function NosotrosPage() {
                       />
                     </div>
                     <div className="col-span-12 sm:col-span-8 lg:col-span-7">
-                      <p className="font-display text-[1.375rem] font-medium leading-[1.15] text-ink">
+                      <p className="heading-tile text-[1.375rem] text-navy">
                         Dr. Víctor Ignacio Espinoza Aranguren
                       </p>
                       <p className="mt-2 font-mono text-[0.6875rem] font-bold uppercase tracking-[0.2em] text-teal-deep">
@@ -189,7 +173,7 @@ export default function NosotrosPage() {
                         con 32 años de experiencia clínica en EsSalud, formado
                         en la Universidad Nacional Mayor de San Marcos.
                       </p>
-                      <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-4 border-t border-ink/12 pt-5">
+                      <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-4 border-t border-line pt-5">
                         <li>
                           <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
                             30+ años
@@ -223,7 +207,7 @@ export default function NosotrosPage() {
                           </p>
                         </li>
                       </ul>
-                      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-t border-ink/12 pt-5">
+                      <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 border-t border-line pt-5">
                         <a
                           href="https://www.linkedin.com/in/victorespinozaaranguren"
                           target="_blank"
@@ -293,10 +277,7 @@ export default function NosotrosPage() {
       </section>
 
       <section className="relative overflow-hidden bg-navy py-20 text-paper sm:py-28">
-        <div
-          aria-hidden="true"
-          className="spec-grid absolute inset-0 opacity-30"
-        />
+        <GridOverlay className="opacity-30" />
         <Container className="relative">
           <Reveal>
             <div className="grid grid-cols-12 gap-x-6 gap-y-10">
@@ -304,9 +285,9 @@ export default function NosotrosPage() {
                 <Eyebrow light number="N.05">
                   Nuestro propósito
                 </Eyebrow>
-                <p className="mt-6 font-display text-[2.25rem] font-medium leading-[1.1] tracking-[-0.015em] text-balance sm:text-[3rem] lg:text-[3.75rem]">
+                <h2 className="mt-6 heading-section text-[2.25rem] text-paper sm:text-[3rem] lg:text-[3.75rem]">
                   Facilitar el acceso a tecnología médica especializada
-                </p>
+                </h2>
                 <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.65] text-paper/75">
                   Mediante una experiencia profesional, clara y cercana.
                 </p>

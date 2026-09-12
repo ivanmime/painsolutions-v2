@@ -7,10 +7,10 @@ export default function NotFound() {
     <section className="bg-paper">
       <Container className="flex min-h-[60vh] flex-col items-start justify-center py-24">
         <Eyebrow number="404">Error</Eyebrow>
-        <h1 className="mt-6 max-w-2xl font-sans text-[3rem] font-extrabold uppercase leading-[1.05] tracking-[-0.025em] text-navy text-balance sm:text-[4rem] lg:text-[5rem]">
+        <h1 className="mt-6 max-w-2xl heading-page text-[2.5rem] text-navy sm:text-[3.25rem] lg:text-[clamp(2.5rem,3.8vw,3.75rem)]">
           Página no encontrada
         </h1>
-        <p className="mt-6 max-w-xl text-[1.0625rem] leading-[1.65] text-ink-soft">
+        <p className="mt-6 max-w-xl lead">
           La página que buscas no existe o fue movida. Explora nuestras
           soluciones médicas o habla con un asesor.
         </p>

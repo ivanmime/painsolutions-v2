@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/Button";
+import { Eyebrow } from "@/components/ui/Layout";
+import { GridOverlay } from "@/components/ui/GridOverlay";
 import { whatsappLink } from "@/data/site";
 
 const ease = [0.2, 0.7, 0.1, 1] as const;
@@ -21,19 +23,13 @@ export default function Hero() {
         {/* ── Left · editorial copy ───────────────────────── */}
         <div className="relative col-span-12 flex flex-col justify-center px-6 pb-20 pt-10 sm:px-8 sm:pb-24 sm:pt-12 lg:col-span-7 lg:px-12 lg:pb-28 lg:pt-12 xl:px-16">
           <div className="mx-auto w-full max-w-[80rem]">
-            <motion.div
-              {...fade(0.05)}
-              className="flex items-center gap-3"
-            >
-              <span className="font-mono text-[0.6875rem] uppercase tracking-[0.25em] text-teal-deep">
-                <span className="mr-2 inline-block h-px w-8 align-middle bg-teal" />
-                Tecnología médica especializada
-              </span>
+            <motion.div {...fade(0.05)}>
+              <Eyebrow>Tecnología médica especializada</Eyebrow>
             </motion.div>
 
             <motion.h1
               {...fade(0.12)}
-              className="mt-6 font-sans text-[2.5rem] font-extrabold leading-[1.05] tracking-[-0.025em] text-navy text-balance sm:text-[3.25rem] lg:text-[clamp(2.5rem,3.8vw,3.75rem)]"
+              className="mt-6 heading-page text-[2.5rem] text-navy sm:text-[3.25rem] lg:text-[clamp(2.5rem,3.8vw,3.75rem)]"
             >
               La más alta tecnología
               <br />
@@ -45,7 +41,7 @@ export default function Hero() {
 
             <motion.p
               {...fade(0.22)}
-              className="mt-6 max-w-xl text-[1.0625rem] leading-[1.6] text-ink-soft"
+              className="mt-6 max-w-xl lead"
             >
               Distribuimos en Perú soluciones médicas especializadas y
               acompañamos a profesionales e instituciones en su elección y uso
@@ -80,7 +76,7 @@ export default function Hero() {
             ].map(([value, label]) => (
               <div key={label}>
                 <dt className="sr-only">{label}</dt>
-                <dd className="font-display text-2xl font-bold text-navy">{value}</dd>
+                <dd className="font-sans text-2xl font-extrabold text-navy">{value}</dd>
                 <dd className="mt-0.5 text-xs font-medium text-ink-muted">{label}</dd>
               </div>
             ))}
@@ -91,15 +87,7 @@ export default function Hero() {
         {/* ── Right · teal block with product image ────────── */}
         <div className="relative col-span-12 bg-teal lg:col-span-5">
           {/* Subtle grid overlay */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 opacity-15"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgb(255 255 255 / 0.4) 1px, transparent 1px), linear-gradient(to bottom, rgb(255 255 255 / 0.4) 1px, transparent 1px)",
-              backgroundSize: "32px 32px",
-            }}
-          />
+          <GridOverlay className="opacity-15" />
 
           <div className="relative flex h-full min-h-[480px] flex-col px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
             <div className="flex items-center justify-between text-paper">
