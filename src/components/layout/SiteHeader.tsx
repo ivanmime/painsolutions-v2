@@ -317,7 +317,7 @@ export default function SiteHeader() {
           <ButtonLink
             href="/asesoria"
             variant="primary"
-            className="hidden lg:inline-flex"
+            className="max-lg:hidden"
           >
             Hablar con un asesor
           </ButtonLink>
