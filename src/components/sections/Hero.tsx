@@ -19,7 +19,7 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-paper">
       <div className="relative grid grid-cols-12">
         {/* ── Left · editorial copy ───────────────────────── */}
-        <div className="relative col-span-12 flex flex-col justify-center px-6 py-20 sm:px-8 sm:py-24 lg:col-span-7 lg:px-12 lg:py-32 xl:px-16">
+        <div className="relative col-span-12 flex flex-col justify-center px-6 pb-20 pt-10 sm:px-8 sm:pb-24 sm:pt-12 lg:col-span-7 lg:px-12 lg:pb-28 lg:pt-12 xl:px-16">
           <div className="mx-auto w-full max-w-[80rem]">
             <motion.div
               {...fade(0.05)}
@@ -33,7 +33,7 @@ export default function Hero() {
 
             <motion.h1
               {...fade(0.12)}
-              className="mt-8 font-sans text-[2.75rem] font-extrabold leading-[1.05] tracking-[-0.025em] text-navy text-balance sm:text-[3.75rem] lg:text-[4.5rem]"
+              className="mt-6 font-sans text-[2.5rem] font-extrabold leading-[1.05] tracking-[-0.025em] text-navy text-balance sm:text-[3.25rem] lg:text-[clamp(2.5rem,3.8vw,3.75rem)]"
             >
               La más alta tecnología
               <br />
@@ -45,7 +45,7 @@ export default function Hero() {
 
             <motion.p
               {...fade(0.22)}
-              className="mt-8 max-w-xl text-[1.0625rem] leading-[1.6] text-ink-soft"
+              className="mt-6 max-w-xl text-[1.0625rem] leading-[1.6] text-ink-soft"
             >
               Distribuimos en Perú la línea completa de {site.brand} para
               procedimientos de ablación por radiofrecuencia. Cánulas,
@@ -55,7 +55,7 @@ export default function Hero() {
 
             <motion.div
               {...fade(0.32)}
-              className="mt-10 flex flex-wrap items-center gap-4"
+              className="mt-7 flex flex-wrap items-center gap-4"
             >
               <ButtonLink href="/soluciones" variant="primary">
                 Explorar soluciones
@@ -72,7 +72,7 @@ export default function Hero() {
             {/* Stats strip */}
             <motion.dl
               {...fade(0.42)}
-              className="mt-16 grid max-w-xl grid-cols-3 gap-6 border-t-2 border-navy pt-8"
+              className="mt-10 grid max-w-xl grid-cols-3 gap-6 border-t-2 border-navy pt-6"
             >
             {[
               ["01", "Solución RFA"],
