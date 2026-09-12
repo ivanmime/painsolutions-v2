@@ -11,7 +11,7 @@ function BrandMark() {
   return (
     <Link
       href="/"
-      className="group flex items-center gap-3"
+      className="group flex min-w-0 items-center gap-3"
       aria-label="Pain Solutions — Inicio"
     >
       <span
@@ -27,11 +27,11 @@ function BrandMark() {
           className="h-full w-full object-cover"
         />
       </span>
-      <span className="flex flex-col leading-[1]">
+      <span className="flex min-w-0 flex-col leading-[1]">
         <span className="font-sans text-[1.0625rem] font-extrabold uppercase tracking-tight text-ink">
           Pain <span className="text-teal-deep">Solutions</span>
         </span>
-        <span className="mt-1 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+        <span className="mt-1 hidden font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted sm:block">
           Tecnología médica especializada
         </span>
       </span>
@@ -344,7 +344,7 @@ export default function SiteHeader() {
             onClick={() => setMobileOpen((v) => !v)}
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
-            className="grid h-10 w-10 place-items-center border border-ink/20 text-ink transition-colors hover:border-ink lg:hidden"
+            className="grid h-10 w-10 shrink-0 place-items-center border border-ink/20 text-ink transition-colors hover:border-ink lg:hidden"
           >
             <span className="relative block h-3 w-4" aria-hidden="true">
               <span
