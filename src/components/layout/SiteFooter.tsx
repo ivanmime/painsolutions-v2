@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Layout";
-import { site, whatsappLink } from "@/data/site";
+import { site, whatsappDisplay, whatsappLink } from "@/data/site";
 import { families } from "@/data/families";
 
 const year = new Date().getFullYear();
@@ -124,7 +124,7 @@ export default function SiteFooter() {
                     rel="noopener noreferrer"
                     className="text-paper/80 transition-colors hover:text-teal-light"
                   >
-                    WhatsApp
+                    {whatsappDisplay()}
                   </a>
                 </li>
                 <li>

@@ -89,3 +89,11 @@ export function productWhatsappLink(productName: string, sku?: string): string {
     `Hola, quisiera recibir información sobre ${productName}${line}.`
   );
 }
+
+export function whatsappDisplay(): string {
+  const digits = site.whatsappNumber.replace(/\D/g, "");
+  if (digits.length === 11 && digits.startsWith("51")) {
+    return `+51 ${digits.slice(2, 5)} ${digits.slice(5, 8)} ${digits.slice(8)}`;
+  }
+  return `+${digits}`;
+}
