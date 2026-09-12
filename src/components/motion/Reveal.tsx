@@ -23,10 +23,10 @@ export function Reveal({
   return (
     <MotionTag
       className={className}
-      initial={reduce ? false : { opacity: 0, y }}
+      initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.7, delay, ease }}
+      transition={reduce ? { duration: 0 } : { duration: 0.7, delay, ease }}
     >
       {children}
     </MotionTag>
@@ -73,8 +73,12 @@ export function StaggerItem({
     <motion.div
       className={className}
       variants={{
-        hidden: reduce ? {} : { opacity: 0, y },
-        show: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
+        hidden: { opacity: 0, y },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: reduce ? { duration: 0 } : { duration: 0.55, ease },
+        },
       }}
     >
       {children}

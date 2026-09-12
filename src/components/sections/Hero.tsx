@@ -10,9 +10,9 @@ const ease = [0.2, 0.7, 0.1, 1] as const;
 export default function Hero() {
   const reduce = useReducedMotion();
   const fade = (delay: number, y = 16) => ({
-    initial: reduce ? false : { opacity: 0, y },
+    initial: { opacity: 0, y },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.7, delay, ease },
+    transition: reduce ? { duration: 0 } : { duration: 0.7, delay, ease },
   });
 
   return (
