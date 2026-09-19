@@ -23,12 +23,21 @@ export const metadata: Metadata = {
 const WHATSAPP_ALQUILER =
   "Hola, estoy interesado(a) en el servicio de alquiler por procedimiento con el equipo Cooled RF. Quisiera consultar disponibilidad y condiciones para un próximo caso.";
 
-const equipment = [
+type RentalEquipment = {
+  code: string;
+  brand: string;
+  name: string;
+  image?: string;
+  description: string;
+  specs: { label: string; value: string }[];
+};
+
+const equipment: RentalEquipment[] = [
   {
     code: "01",
     brand: "AVANOS",
     name: "Cooled RF",
-    image: "/images/products/cooled-kit.png" as string | undefined,
+    image: "/images/products/cooled-kit.png",
     description:
       "Equipo Cooled RF de Avanos para procedimientos de radiofrecuencia refrigerada, con los componentes y accesorios de su línea de sistema.",
     specs: [
@@ -41,7 +50,7 @@ const equipment = [
     code: "02",
     brand: "BAYLIS MEDICAL",
     name: "Cooled RF",
-    image: undefined as string | undefined,
+    image: "/images/products/baylis-cooled-rf.png",
     description:
       "Equipo Cooled RF de Baylis Medical para procedimientos de radiofrecuencia refrigerada. Descripción pendiente de completar.",
     specs: [
