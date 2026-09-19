@@ -11,7 +11,7 @@ export default function SiteFooter() {
       <Container className="pt-20 pb-10">
         {/* Top — colophon */}
         <div className="grid grid-cols-12 gap-x-6 gap-y-12 pb-14">
-          <div className="col-span-12 lg:col-span-5">
+          <div className="col-span-12 lg:col-span-4">
             <div className="flex items-center gap-3">
               <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-teal text-paper ring-1 ring-paper/20">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -40,7 +40,7 @@ export default function SiteFooter() {
             </p>
           </div>
 
-          <div className="col-span-6 lg:col-span-2 lg:col-start-7">
+          <div className="col-span-6 lg:col-span-2 lg:col-start-6">
             <FooterCol title="Servicios" code="01">
               <ul className="space-y-2.5 text-sm">
                 <li>
