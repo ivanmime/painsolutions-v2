@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import AlquilerForm from "@/components/forms/AlquilerForm";
 import { ButtonLink } from "@/components/ui/Button";
+import { GridOverlay } from "@/components/ui/GridOverlay";
 import {
   Container,
   Eyebrow,
@@ -13,18 +16,47 @@ import { whatsappLink } from "@/data/site";
 export const metadata: Metadata = {
   title: "Alquiler por procedimiento",
   description:
-    "Alquiler de la máquina BAYLIS para procedimientos que requieran esta tecnología, con soporte operativo y logístico coordinado para cada caso.",
+    "Alquiler del equipo Cooled RF, con proveedor Avanos o Baylis Medical, para procedimientos que requieran esta tecnología, con soporte operativo y logístico coordinado para cada caso.",
   alternates: { canonical: "/alquiler" },
 };
 
 const WHATSAPP_ALQUILER =
-  "Hola, estoy interesado(a) en el servicio de alquiler por procedimiento con el equipo BAYLIS. Quisiera consultar disponibilidad y condiciones para un próximo caso.";
+  "Hola, estoy interesado(a) en el servicio de alquiler por procedimiento con el equipo Cooled RF. Quisiera consultar disponibilidad y condiciones para un próximo caso.";
+
+const equipment = [
+  {
+    code: "01",
+    brand: "AVANOS",
+    name: "Cooled RF",
+    image: "/images/products/cooled-kit.png" as string | undefined,
+    description:
+      "Equipo Cooled RF de Avanos para procedimientos de radiofrecuencia refrigerada, con los componentes y accesorios de su línea de sistema.",
+    specs: [
+      { label: "Proveedor", value: "Avanos" },
+      { label: "Modalidad", value: "Cooled RFA" },
+      { label: "Componentes", value: "Por definir" },
+    ],
+  },
+  {
+    code: "02",
+    brand: "BAYLIS MEDICAL",
+    name: "Cooled RF",
+    image: undefined as string | undefined,
+    description:
+      "Equipo Cooled RF de Baylis Medical para procedimientos de radiofrecuencia refrigerada. Descripción pendiente de completar.",
+    specs: [
+      { label: "Proveedor", value: "Baylis Medical" },
+      { label: "Modalidad", value: "Cooled RFA" },
+      { label: "Componentes", value: "Por definir" },
+    ],
+  },
+];
 
 const includes = [
   {
     code: "01",
-    title: "Equipo BAYLIS",
-    text: "Disponibilidad de la máquina BAYLIS durante el tiempo coordinado para la realización del procedimiento.",
+    title: "Equipo Cooled RF",
+    text: "Disponibilidad del equipo Cooled RF durante el tiempo coordinado para la realización del procedimiento, según el proveedor elegido.",
   },
   {
     code: "02",
@@ -52,7 +84,7 @@ const steps = [
   {
     number: "02",
     title: "Revisamos la configuración necesaria",
-    text: "Identificamos el equipo, las cánulas y los componentes requeridos para preparar el servicio.",
+    text: "Identificamos el equipo —Avanos o Baylis Medical—, las cánulas y los componentes requeridos para preparar el servicio.",
   },
   {
     number: "03",
@@ -72,7 +104,7 @@ const steps = [
 ];
 
 const quoteItems = [
-  "Equipo BAYLIS",
+  "Equipo y proveedor",
   "Cánulas y consumibles",
   "Personal requerido",
   "Lugar del procedimiento",
@@ -93,8 +125,9 @@ export default function AlquilerPage() {
               necesidad de adquirir el equipo.
             </p>
             <p>
-              Coordinamos el alquiler de la máquina BAYLIS para procedimientos
-              que requieran esta tecnología, junto con el soporte operativo y
+              Coordinamos el alquiler del equipo Cooled RF —disponible con
+              proveedor Avanos o Baylis Medical— para procedimientos que
+              requieran esta tecnología, junto con el soporte operativo y
               logístico necesario para cada caso.
             </p>
           </>
@@ -115,12 +148,107 @@ export default function AlquilerPage() {
         }
       />
 
+      <section className="border-b border-line bg-ice/50 py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <SectionHeading
+              eyebrow="Equipos disponibles"
+              number="AL.01"
+              title="Equipos disponibles para alquiler"
+              description="Elige el equipo que mejor se adapte a tu procedimiento y a la disponibilidad del momento."
+            />
+          </Reveal>
+          <Stagger className="mt-14 grid gap-6 sm:grid-cols-2">
+            {equipment.map((item) => (
+              <StaggerItem key={item.code} className="h-full">
+                <div className="flex h-full flex-col border-2 border-ink bg-paper">
+                  <div className="relative aspect-[4/3] overflow-hidden border-b-2 border-ink bg-ice">
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={`Equipo ${item.name} de ${item.brand}`}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                        className="object-contain p-6"
+                      />
+                    ) : (
+                      <>
+                        <GridOverlay tone="dark" className="opacity-10" />
+                        <div className="absolute inset-0 grid place-items-center">
+                          <span className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+                            Imagen próximamente
+                          </span>
+                        </div>
+                      </>
+                    )}
+                    <div className="absolute left-3 top-3">
+                      <span className="inline-flex items-center bg-navy px-2 py-0.5 font-mono text-[0.5625rem] font-bold uppercase tracking-[0.2em] text-paper">
+                        {item.brand}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col p-5 sm:p-6">
+                    <p className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-teal-deep">
+                      {item.code} · Equipo
+                    </p>
+                    <h3 className="mt-2 heading-tile text-[1.375rem] text-navy">
+                      {item.name}
+                    </h3>
+                    <p className="mt-3 text-[0.9375rem] leading-[1.6] text-ink-soft">
+                      {item.description}
+                    </p>
+                    <dl className="mt-5 border-t border-line">
+                      {item.specs.map((spec) => (
+                        <div
+                          key={spec.label}
+                          className="flex items-baseline justify-between gap-4 border-b border-line py-2.5"
+                        >
+                          <dt className="font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted">
+                            {spec.label}
+                          </dt>
+                          <dd className="text-[0.875rem] text-ink-soft">
+                            {spec.value}
+                          </dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <div className="mt-auto pt-6">
+                      <Link
+                        href="#solicitar"
+                        className="group/link inline-flex items-center gap-1.5 font-mono text-[0.625rem] font-bold uppercase tracking-[0.2em] text-navy transition-colors hover:text-teal-deep"
+                      >
+                        Elegir este equipo
+                        <svg
+                          width="10"
+                          height="8"
+                          viewBox="0 0 14 10"
+                          fill="none"
+                          aria-hidden="true"
+                          className="transition-transform duration-200 group-hover/link:translate-x-1"
+                        >
+                          <path
+                            d="M1 5h12M9 1l4 4-4 4"
+                            stroke="currentColor"
+                            strokeWidth="1.6"
+                            strokeLinecap="square"
+                          />
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </Container>
+      </section>
+
       <section className="py-20 sm:py-28">
         <Container>
           <Reveal>
             <SectionHeading
               eyebrow="Qué incluye el servicio"
-              number="AL.01"
+              number="AL.02"
               title="Una solución coordinada para cada procedimiento"
               description="El servicio de alquiler se organiza de acuerdo con las características del procedimiento, la configuración requerida y el lugar donde se realizará."
             >
@@ -168,7 +296,7 @@ export default function AlquilerPage() {
           <Reveal>
             <SectionHeading
               eyebrow="El proceso"
-              number="AL.02"
+              number="AL.03"
               title="¿Cómo funciona?"
             />
           </Reveal>
@@ -204,7 +332,7 @@ export default function AlquilerPage() {
               <Reveal>
                 <SectionHeading
                   eyebrow="Para quién puede ser útil"
-                  number="AL.03"
+                  number="AL.04"
                   title="Una alternativa a la compra para necesidades puntuales"
                 />
               </Reveal>
@@ -238,7 +366,7 @@ export default function AlquilerPage() {
               <Reveal>
                 <SectionHeading
                   eyebrow="Cotización personalizada por procedimiento"
-                  number="AL.04"
+                  number="AL.05"
                   title="Cada caso requiere una coordinación diferente"
                   description="La cotización se prepara considerando:"
                 />
@@ -301,8 +429,8 @@ export default function AlquilerPage() {
               <Reveal>
                 <SectionHeading
                   eyebrow="Solicita información sobre alquiler"
-                  number="AL.05"
-                  title="¿Necesitas la máquina BAYLIS para un próximo procedimiento?"
+                  number="AL.06"
+                  title="¿Necesitas el equipo Cooled RF para un próximo procedimiento?"
                   description="Déjanos los datos principales del caso y nuestro equipo se pondrá en contacto contigo para revisar disponibilidad, configuración y condiciones del servicio."
                 />
               </Reveal>
@@ -324,7 +452,7 @@ export default function AlquilerPage() {
         <Container>
           <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8">
             <div className="col-span-12 lg:col-span-8">
-              <Eyebrow number="AL.06">Alquiler por procedimiento</Eyebrow>
+              <Eyebrow number="AL.07">Alquiler por procedimiento</Eyebrow>
               <h2 className="mt-6 heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
                 ¿Prefieres hablar directamente con nosotros?
               </h2>
