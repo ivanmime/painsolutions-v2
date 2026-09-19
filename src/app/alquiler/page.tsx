@@ -4,11 +4,7 @@ import Image from "next/image";
 import AlquilerForm from "@/components/forms/AlquilerForm";
 import { ButtonLink } from "@/components/ui/Button";
 import { GridOverlay } from "@/components/ui/GridOverlay";
-import {
-  Container,
-  Eyebrow,
-  SectionHeading,
-} from "@/components/ui/Layout";
+import { Container, SectionHeading } from "@/components/ui/Layout";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { whatsappLink } from "@/data/site";
@@ -16,12 +12,12 @@ import { whatsappLink } from "@/data/site";
 export const metadata: Metadata = {
   title: "Alquiler por procedimiento",
   description:
-    "Alquiler del equipo Cooled RF, con proveedor Avanos o Baylis Medical, para procedimientos que requieran esta tecnología, con soporte operativo y logístico coordinado para cada caso.",
+    "Alquiler del equipo Coolief RF de Avanos o del Baylis RF para procedimientos que requieran esta tecnología, con soporte operativo y logístico coordinado para cada caso.",
   alternates: { canonical: "/alquiler" },
 };
 
 const WHATSAPP_ALQUILER =
-  "Hola, estoy interesado(a) en el servicio de alquiler por procedimiento con el equipo Cooled RF. Quisiera consultar disponibilidad y condiciones para un próximo caso.";
+  "Hola, estoy interesado(a) en el servicio de alquiler por procedimiento con el equipo Coolief RF o Baylis RF. Quisiera consultar disponibilidad y condiciones para un próximo caso.";
 
 type RentalEquipment = {
   code: string;
@@ -36,10 +32,10 @@ const equipment: RentalEquipment[] = [
   {
     code: "01",
     brand: "AVANOS",
-    name: "Cooled RF",
+    name: "Coolief RF",
     image: "/images/products/cooled-kit.png",
     description:
-      "Equipo Cooled RF de Avanos para procedimientos de radiofrecuencia refrigerada, con los componentes y accesorios de su línea de sistema.",
+      "Equipo Coolief RF de Avanos para procedimientos de radiofrecuencia refrigerada, con los componentes y accesorios de su línea de sistema.",
     specs: [
       { label: "Proveedor", value: "Avanos" },
       { label: "Modalidad", value: "Cooled RFA" },
@@ -48,10 +44,10 @@ const equipment: RentalEquipment[] = [
   {
     code: "02",
     brand: "BAYLIS MEDICAL",
-    name: "Cooled RF",
+    name: "Baylis RF",
     image: "/images/products/baylis-cooled-rf.png",
     description:
-      "Equipo Cooled RF de Baylis Medical para procedimientos de radiofrecuencia refrigerada, con el generador de manejo del dolor de la marca.",
+      "Equipo Baylis RF de Baylis Medical para procedimientos de radiofrecuencia refrigerada, con el generador de manejo del dolor de la marca.",
     specs: [
       { label: "Proveedor", value: "Baylis Medical" },
       { label: "Modalidad", value: "Cooled RFA" },
@@ -62,8 +58,8 @@ const equipment: RentalEquipment[] = [
 const includes = [
   {
     code: "01",
-    title: "Equipo Cooled RF",
-    text: "Disponibilidad del equipo Cooled RF durante el tiempo coordinado para la realización del procedimiento, según el proveedor elegido.",
+    title: "Equipo",
+    text: "Disponibilidad del equipo —Coolief RF de Avanos o Baylis RF— durante el tiempo coordinado para la realización del procedimiento.",
   },
   {
     code: "02",
@@ -91,7 +87,7 @@ const steps = [
   {
     number: "02",
     title: "Revisamos la configuración necesaria",
-    text: "Identificamos el equipo —Avanos o Baylis Medical—, las cánulas y los componentes requeridos para preparar el servicio.",
+    text: "Identificamos el equipo —Coolief RF de Avanos o Baylis RF—, las cánulas y los componentes requeridos para preparar el servicio.",
   },
   {
     number: "03",
@@ -132,10 +128,10 @@ export default function AlquilerPage() {
               necesidad de adquirir el equipo.
             </p>
             <p>
-              Coordinamos el alquiler del equipo Cooled RF —disponible con
-              proveedor Avanos o Baylis Medical— para procedimientos que
-              requieran esta tecnología, junto con el soporte operativo y
-              logístico necesario para cada caso.
+              Coordinamos el alquiler del equipo Coolief RF de Avanos o del
+              Baylis RF para procedimientos que requieran esta tecnología,
+              junto con el soporte operativo y logístico necesario para cada
+              caso.
             </p>
           </>
         }
@@ -393,36 +389,16 @@ export default function AlquilerPage() {
             </div>
             <div className="col-span-12 flex items-end lg:col-span-5 lg:justify-end">
               <Reveal delay={0.1}>
-                <ButtonLink href="#solicitar" variant="primary">
-                  Solicitar cotización
+                <ButtonLink
+                  href={whatsappLink(WHATSAPP_ALQUILER)}
+                  external
+                  variant="primary"
+                >
+                  Consultar por WhatsApp
                 </ButtonLink>
               </Reveal>
             </div>
           </div>
-        </Container>
-      </section>
-
-      <section className="py-20 sm:py-28">
-        <Container>
-          <Reveal>
-            <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8 border-2 border-ink bg-paper p-8 sm:p-10">
-              <div className="col-span-12 lg:col-span-8">
-                <h2 className="heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
-                  ¿Tienes varios procedimientos programados?
-                </h2>
-                <p className="mt-5 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
-                  Si necesitas el equipo para más de un procedimiento, podemos
-                  revisar contigo la mejor forma de coordinar disponibilidad,
-                  consumibles y logística.
-                </p>
-              </div>
-              <div className="col-span-12 flex flex-wrap items-center gap-3 lg:col-span-4 lg:justify-end">
-                <ButtonLink href="#solicitar" variant="outline-dark">
-                  Consultar disponibilidad
-                </ButtonLink>
-              </div>
-            </div>
-          </Reveal>
         </Container>
       </section>
 
@@ -437,7 +413,7 @@ export default function AlquilerPage() {
                 <SectionHeading
                   eyebrow="Solicita información sobre alquiler"
                   number="AL.06"
-                  title="¿Necesitas el equipo Cooled RF para un próximo procedimiento?"
+                  title="¿Necesitas el equipo para un próximo procedimiento?"
                   description="Déjanos los datos principales del caso y nuestro equipo se pondrá en contacto contigo para revisar disponibilidad, configuración y condiciones del servicio."
                 />
               </Reveal>
@@ -450,32 +426,6 @@ export default function AlquilerPage() {
                   />
                 </div>
               </Reveal>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="border-t border-line bg-ice/50 py-20 sm:py-28">
-        <Container>
-          <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8">
-            <div className="col-span-12 lg:col-span-8">
-              <Eyebrow number="AL.07">Alquiler por procedimiento</Eyebrow>
-              <h2 className="mt-6 heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
-                ¿Prefieres hablar directamente con nosotros?
-              </h2>
-              <p className="mt-5 max-w-2xl text-[1.0625rem] leading-[1.65] text-ink-soft">
-                También puedes escribirnos por WhatsApp para consultar
-                disponibilidad o contarnos sobre tu próximo procedimiento.
-              </p>
-            </div>
-            <div className="col-span-12 flex flex-wrap items-center gap-3 lg:col-span-4 lg:justify-end">
-              <ButtonLink
-                href={whatsappLink(WHATSAPP_ALQUILER)}
-                external
-                variant="primary"
-              >
-                Consultar por WhatsApp
-              </ButtonLink>
             </div>
           </div>
         </Container>

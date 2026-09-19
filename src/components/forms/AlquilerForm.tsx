@@ -70,8 +70,8 @@ export default function AlquilerForm({ endpoint }: { endpoint?: string }) {
         <Field label="Equipo requerido">
           <select name="equipo" defaultValue="" className={selectClass}>
             <option value="">No estoy seguro / por definir</option>
-            <option>Cooled RF — Avanos</option>
-            <option>Cooled RF — Baylis Medical</option>
+            <option>Coolief RF — Avanos</option>
+            <option>Baylis RF — Baylis Medical</option>
           </select>
         </Field>
         <Field label="Cánula o configuración requerida" hint="si la conoce">
