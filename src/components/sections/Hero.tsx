@@ -118,7 +118,7 @@ export default function Hero() {
 
             <div className="border-t border-paper/30 pt-5">
               <p className="font-sans text-[1.25rem] font-extrabold leading-tight text-paper">
-                Cooled RF Kit
+                Cooled RF
               </p>
               <p className="mt-1 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-paper/75">
                 Sistema completo de radiofrecuencia

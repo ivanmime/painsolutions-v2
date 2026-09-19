@@ -179,7 +179,7 @@ export const products: Product[] = [
   {
     slug: "cooled-kit",
     brand: "AVANOS",
-    name: "Cooled RF Kit",
+    name: "Cooled RF",
     family: "cooled",
     productType: "Kit",
     shortDescription:
