@@ -168,6 +168,12 @@ export default function SiteFooter() {
             >
               Términos y condiciones
             </Link>
+            <Link
+              href="/libro-de-reclamaciones"
+              className="text-paper/55 transition-colors hover:text-paper"
+            >
+              Libro de Reclamaciones
+            </Link>
           </nav>
         </div>
 
