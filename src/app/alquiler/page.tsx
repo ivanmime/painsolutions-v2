@@ -43,7 +43,6 @@ const equipment: RentalEquipment[] = [
     specs: [
       { label: "Proveedor", value: "Avanos" },
       { label: "Modalidad", value: "Cooled RFA" },
-      { label: "Componentes", value: "Por definir" },
     ],
   },
   {
@@ -56,7 +55,6 @@ const equipment: RentalEquipment[] = [
     specs: [
       { label: "Proveedor", value: "Baylis Medical" },
       { label: "Modalidad", value: "Cooled RFA" },
-      { label: "Componentes", value: "Por definir" },
     ],
   },
 ];
