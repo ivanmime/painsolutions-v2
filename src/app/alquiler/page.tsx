@@ -51,7 +51,7 @@ const equipment: RentalEquipment[] = [
     name: "Cooled RF",
     image: "/images/products/baylis-cooled-rf.png",
     description:
-      "Equipo Cooled RF de Baylis Medical para procedimientos de radiofrecuencia refrigerada. Descripción pendiente de completar.",
+      "Equipo Cooled RF de Baylis Medical para procedimientos de radiofrecuencia refrigerada, con el generador de manejo del dolor de la marca.",
     specs: [
       { label: "Proveedor", value: "Baylis Medical" },
       { label: "Modalidad", value: "Cooled RFA" },
