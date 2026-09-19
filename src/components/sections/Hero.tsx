@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="relative col-span-12 flex flex-col justify-center px-6 pb-20 pt-10 sm:px-8 sm:pb-24 sm:pt-12 lg:col-span-7 lg:px-12 lg:pb-28 lg:pt-12 xl:px-16">
           <div className="mx-auto w-full max-w-[80rem]">
             <motion.div {...fade(0.05)}>
-              <Eyebrow>Tecnología médica especializada</Eyebrow>
+              <Eyebrow>Soluciones contra el dolor</Eyebrow>
             </motion.div>
 
             <motion.h1

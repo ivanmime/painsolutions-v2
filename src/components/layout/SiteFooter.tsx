@@ -28,7 +28,7 @@ export default function SiteFooter() {
                   Pain <span className="text-teal-light">Solutions</span>
                 </span>
                 <span className="mt-1 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-paper/55">
-                  Tecnología médica especializada
+                  Soluciones contra el dolor
                 </span>
               </span>
             </div>

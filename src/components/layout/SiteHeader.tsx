@@ -32,7 +32,7 @@ function BrandMark() {
           Pain <span className="text-teal-deep">Solutions</span>
         </span>
         <span className="mt-1 hidden font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted sm:block">
-          Tecnología médica especializada
+          Soluciones contra el dolor
         </span>
       </span>
     </Link>
