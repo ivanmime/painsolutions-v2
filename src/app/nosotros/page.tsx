@@ -18,6 +18,21 @@ export const metadata: Metadata = {
   alternates: { canonical: "/nosotros" },
 };
 
+const mission = [
+  {
+    title: "Conocimiento clínico",
+    text: "Entendemos las necesidades de la práctica clínica, selección adecuada de la tecnología, disponibilidad de consumibles y acompañamiento durante su incorporación.",
+  },
+  {
+    title: "Tecnología especializada",
+    text: "Brindamos soluciones de radiofrecuencia para el manejo del dolor, trabajando con tecnología de fabricantes internacionales para proveer a médicos y centros especializados.",
+  },
+  {
+    title: "Acompañamiento",
+    text: "Con el objetivo de establecer relaciones a largo plazo con profesionales e instituciones intervencionistas del dolor, facilitamos el proceso, desde la identificación de la tecnología especializada adecuada, hasta su implementación.",
+  },
+];
+
 const pillars = [
   {
     code: "01",
@@ -49,41 +64,14 @@ export default function NosotrosPage() {
         eyebrow="Pain Solutions"
         title="Tecnología especializada para el manejo intervencionista del dolor"
         lead="Ponemos a disposición de médicos e instituciones de salud soluciones de radiofrecuencia y tecnología médica especializada, seleccionadas para responder a las necesidades reales de la práctica clínica."
+        texture
       />
-
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="grid grid-cols-12 gap-x-6 gap-y-12">
-            <div className="col-span-12 lg:col-span-4">
-              <Reveal>
-                <Eyebrow number="N.02">Propuesta de valor</Eyebrow>
-              </Reveal>
-            </div>
-            <div className="col-span-12 lg:col-span-8">
-              <Reveal delay={0.1}>
-                <p className="heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
-                  Tecnología. Conocimiento. Acompañamiento.
-                </p>
-              </Reveal>
-              <Reveal delay={0.2}>
-                <p className="mt-7 max-w-2xl text-[1.0625rem] leading-[1.7] text-ink-soft">
-                  Desde la identificación de la solución adecuada hasta su
-                  implementación, trabajamos junto al profesional y la
-                  institución para facilitar el acceso a tecnología
-                  especializada para el tratamiento del dolor, dado que
-                  contamos con más de 17 años de experiencia.
-                </p>
-              </Reveal>
-            </div>
-          </div>
-        </Container>
-      </section>
 
       <section className="border-y border-line bg-teal py-14 text-paper sm:py-16">
         <Container>
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             <Stat value="30+" label="Años" hint="Manejo del dolor" light />
-            <Stat value="01" label="Fabricante" hint="Avanos" light />
+            <Stat value="02" label="Fabricantes" hint="Avanos · Baylis Medical" light />
             <Stat value="13" label="Referencias" hint="Catálogo vigente" light />
             <Stat value="PE" label="Cobertura" hint="Nacional" light />
           </div>
@@ -94,9 +82,35 @@ export default function NosotrosPage() {
         <Container>
           <Reveal>
             <SectionHeading
+              eyebrow="Misión"
+              number="N.02"
+              title="Facilitar el acceso a tecnología médica especializada para el manejo del dolor en el Perú."
+            />
+          </Reveal>
+          <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {mission.map((item) => (
+              <StaggerItem key={item.title} className="h-full">
+                <div className="flex h-full flex-col border-2 border-ink bg-paper p-6">
+                  <h3 className="heading-tile text-[1.25rem] text-navy">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-[0.9375rem] leading-[1.6] text-ink-soft">
+                    {item.text}
+                  </p>
+                </div>
+              </StaggerItem>
+            ))}
+          </Stagger>
+        </Container>
+      </section>
+
+      <section className="py-20 sm:py-28">
+        <Container>
+          <Reveal>
+            <SectionHeading
               eyebrow="Cómo trabajamos"
               number="N.03"
-              title="Cuatro pilares, un solo criterio."
+              title="Cómo convertimos una necesidad en Servicio"
               description="El proceso detrás de cada cotización que entregamos."
             />
           </Reveal>
