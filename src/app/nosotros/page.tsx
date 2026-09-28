@@ -47,7 +47,7 @@ const pillars = [
   {
     code: "03",
     title: "Gestionamos",
-    text: "Facilitamos el proceso comercial y de adquisición.",
+    text: "Facilitamos el proceso comercial de alquiler y/o adquisición.",
   },
   {
     code: "04",
