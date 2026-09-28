@@ -62,6 +62,7 @@ export default function ContactoPage() {
             </dl>
           </div>
         }
+        texture
       />
 
       <section className="py-20 sm:py-28">

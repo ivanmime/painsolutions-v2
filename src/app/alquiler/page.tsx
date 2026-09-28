@@ -149,6 +149,7 @@ export default function AlquilerPage() {
             </ButtonLink>
           </>
         }
+        texture
       />
 
       <section className="border-b border-line bg-ice/50 py-20 sm:py-28">

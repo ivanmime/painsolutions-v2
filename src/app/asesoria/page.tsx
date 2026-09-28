@@ -109,6 +109,7 @@ export default function AsesoriaPage() {
             </ButtonLink>
           </>
         }
+        texture
       />
 
       <section className="py-20 sm:py-28">
