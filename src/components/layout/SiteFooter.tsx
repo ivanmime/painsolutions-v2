@@ -27,9 +27,6 @@ export default function SiteFooter() {
                 <span className="font-sans text-[1.125rem] font-extrabold uppercase text-paper">
                   Pain <span className="text-teal-light">Solutions</span>
                 </span>
-                <span className="mt-1 font-mono text-[0.625rem] uppercase tracking-[0.2em] text-paper/55">
-                  Soluciones contra el dolor
-                </span>
               </span>
             </div>
             <p className="mt-8 max-w-md font-sans text-[1.625rem] font-extrabold uppercase leading-[1.05] tracking-[-0.015em] text-paper text-balance">

@@ -31,9 +31,6 @@ function BrandMark() {
         <span className="font-sans text-[1.0625rem] font-extrabold uppercase tracking-tight text-ink">
           Pain <span className="text-teal-deep">Solutions</span>
         </span>
-        <span className="mt-1 hidden font-mono text-[0.625rem] uppercase tracking-[0.2em] text-ink-muted sm:block">
-          Soluciones contra el dolor
-        </span>
       </span>
     </Link>
   );
