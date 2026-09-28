@@ -8,7 +8,7 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51932441179",
   contactEmail:
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "vicanespinoza@gmail.com",
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL || "painsolutionsperu@gmail.com",
   location: "Lima, Perú",
   founded: 2026,
   brand: "AVANOS",
