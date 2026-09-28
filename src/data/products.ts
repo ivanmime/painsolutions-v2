@@ -30,9 +30,9 @@ export const products: Product[] = [
   {
     slug: "conventional-cannula",
     brand: "AVANOS",
-    name: "Conventional Cannula",
+    name: "Cánula Convencional",
     family: "conventional",
-    productType: "Cannula",
+    productType: "Cánula",
     shortDescription:
       "Cánula especializada para procedimientos de radiofrecuencia convencional. Calibres y longitudes activas configurables según la profundidad del tejido objetivo.",
     longDescription:
@@ -41,16 +41,16 @@ export const products: Product[] = [
     features: [
       "Active Tip Length 5 mm — lesión focal de tamaño estándar para nervios periféricos",
       "Gauge 18G — equilibrio entre precisión y facilidad de inserción",
-      "Cannula Length 100 mm — adecuada para planos superficiales y medianos",
+      "Longitud de cánula 100 mm — adecuada para planos superficiales y medianos",
       "Punta recta — orientación coaxial con el eje de inserción",
     ],
     variants: [
       {
         sku: "CC-STD-18-100",
         attributes: [
-          { label: "Active Tip Length", value: "5 mm" },
-          { label: "Cannula Gauge", value: "18G" },
-          { label: "Cannula Length", value: "100 mm" },
+          { label: "Longitud de Punta Activa", value: "5 mm" },
+          { label: "Calibre de Cánula", value: "18G" },
+          { label: "Longitud de Cánula", value: "100 mm" },
           { label: "Tip Shape", value: "Straight" },
         ],
         availability: "on_request",
@@ -62,16 +62,16 @@ export const products: Product[] = [
       "La cánula convencional Avanos de 18G y 100 mm con punta activa de 5 mm está diseñada para procedimientos estándar de ablación por radiofrecuencia convencional. Su configuración permite lesiones focales en nervios periféricos, ramas articulares y ramas comunicantes, con la precisión que requieren los procedimientos intervencionistas de manejo del dolor. La punta activa de 5 mm genera una lesión térmica predecible cuando se aplica la energía recomendada por el fabricante.",
       "Esta cánula es compatible con los generadores Avanos de la línea RFA y se integra con sondas reutilizables y de un solo uso del portafolio. La selección de calibre y longitud debe considerar la profundidad del tejido objetivo y la anatomía del paciente. Pain Solutions distribuye la línea completa Avanos en Perú; si necesita orientación sobre la configuración correcta para una indicación específica, nuestro equipo puede revisar las alternativas disponibles.",
     ],
-    seoTitle: "Conventional Cannula 18G 100mm — Distribuidor Avanos en Perú | Pain Solutions",
+    seoTitle: "Cánula Convencional 18G 100mm — Distribuidor Avanos en Perú | Pain Solutions",
     seoDescription:
       "Cánula Avanos para RFA convencional con punta activa de 5 mm, gauge 18G y longitud 100 mm. Compatible con generadores Avanos. Distribuidor en Perú.",
   },
   {
     slug: "conventional-reusable-probe",
     brand: "AVANOS",
-    name: "Conventional Reusable Probe",
+    name: "Electrodo Reutilizable Convencional",
     family: "conventional",
-    productType: "Probe",
+    productType: "Electrodo",
     shortDescription:
       "Sonda reutilizable para radiofrecuencia convencional. Punta activa de precisión para procedimientos repetidos con la misma sonda.",
     longDescription:
@@ -87,8 +87,8 @@ export const products: Product[] = [
       {
         sku: "CRP-STD-18",
         attributes: [
-          { label: "Cannula Gauge", value: "18G" },
-          { label: "Active Tip Length", value: "5 mm" },
+          { label: "Calibre de Cánula", value: "18G" },
+          { label: "Longitud de Punta Activa", value: "5 mm" },
         ],
         availability: "on_request",
       },
@@ -96,18 +96,18 @@ export const products: Product[] = [
     relatedProducts: ["conventional-cannula", "conventional-single-use-probe"],
     body: [
       "La sonda reutilizable Avanos para RFA convencional está diseñada para centros que realizan un volumen elevado de procedimientos y pueden amortizar la inversión en una sonda durable. Su punta activa de 5 mm y gauge 18G entregan una lesión focal predecible en nervios periféricos, ramas articulares y ramas comunicantes, manteniendo las características técnicas del sistema convencional Avanos.",
-      "Esta sonda se esteriliza según el protocolo del fabricante entre usos, lo que reduce el costo por procedimiento en centros con flujo clínico sostenido. Es compatible con los generadores Avanos de la línea RFA y con las cánulas conventional cannula del portafolio. Pain Solutions distribuye esta sonda en Perú; si su centro busca optimizar el costo por procedimiento sin sacrificar precisión, nuestro equipo puede revisar las alternativas disponibles.",
+      "Esta sonda se esteriliza según el protocolo del fabricante entre usos, lo que reduce el costo por procedimiento en centros con flujo clínico sostenido. Es compatible con los generadores Avanos de la línea RFA y con las cánulas convencionales del portafolio. Pain Solutions distribuye esta sonda en Perú; si su centro busca optimizar el costo por procedimiento sin sacrificar precisión, nuestro equipo puede revisar las alternativas disponibles.",
     ],
-    seoTitle: "Conventional Reusable Probe Avanos 18G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo Reutilizable Convencional Avanos 18G — Distribuidor en Perú | Pain Solutions",
     seoDescription:
       "Sonda reutilizable Avanos para RFA convencional. Punta activa de 5 mm, gauge 18G. Compatible con generadores Avanos. Distribuidor en Perú.",
   },
   {
     slug: "conventional-single-use-probe",
     brand: "AVANOS",
-    name: "Conventional Single Use Probe",
+    name: "Electrodo de Un Solo Uso Convencional",
     family: "conventional",
-    productType: "Probe",
+    productType: "Electrodo",
     shortDescription:
       "Sonda de un solo uso para radiofrecuencia convencional. Esterilidad garantizada y rendimiento consistente por procedimiento.",
     longDescription:
@@ -123,8 +123,8 @@ export const products: Product[] = [
       {
         sku: "CSP-STD-18",
         attributes: [
-          { label: "Cannula Gauge", value: "18G" },
-          { label: "Active Tip Length", value: "5 mm" },
+          { label: "Calibre de Cánula", value: "18G" },
+          { label: "Longitud de Punta Activa", value: "5 mm" },
         ],
         availability: "on_request",
       },
@@ -132,18 +132,18 @@ export const products: Product[] = [
     relatedProducts: ["conventional-cannula", "conventional-reusable-probe"],
     body: [
       "La sonda de un solo uso Avanos para RFA convencional garantiza la máxima esterilidad en cada procedimiento, eliminando el riesgo residual asociado a procesos de re-esterilización. Su punta activa de 5 mm y gauge 18G entregan una lesión focal predecible en nervios periféricos, ramas articulares y ramas comunicantes, con la misma precisión técnica que la sonda reutilizable.",
-      "Esta sonda es ideal para centros con volumen moderado, clínicas que prefieren flujo de un solo uso por procedimiento, o contextos donde la trazabilidad individual del insumo es un requisito regulatorio. Pain Solutions distribuye la sonda single-use Avanos en Perú; si su centro prioriza esterilidad y trazabilidad por sobre reuso, esta es la configuración correcta.",
+      "Esta sonda es ideal para centros con volumen moderado, clínicas que prefieren flujo de un solo uso por procedimiento, o contextos donde la trazabilidad individual del insumo es un requisito regulatorio. Pain Solutions distribuye la sonda de un solo uso Avanos en Perú; si su centro prioriza esterilidad y trazabilidad por sobre reuso, esta es la configuración correcta.",
     ],
-    seoTitle: "Conventional Single Use Probe Avanos 18G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo de Un Solo Uso Convencional Avanos 18G — Distribuidor en Perú | Pain Solutions",
     seoDescription:
       "Sonda de un solo uso Avanos para RFA convencional. Punta activa de 5 mm, gauge 18G. Esterilidad garantizada. Distribuidor en Perú.",
   },
   {
     slug: "hybrid-cannula",
     brand: "AVANOS",
-    name: "Hybrid Cannula",
+    name: "Cánula Híbrida",
     family: "conventional",
-    productType: "Cannula",
+    productType: "Cánula",
     shortDescription:
       "Cánula híbrida que combina versatilidad y precisión para procedimientos de radiofrecuencia convencional y orientación ajustable.",
     longDescription:
@@ -159,9 +159,9 @@ export const products: Product[] = [
       {
         sku: "HC-STD-18-10",
         attributes: [
-          { label: "Active Tip Length", value: "10 mm" },
-          { label: "Cannula Gauge", value: "18G" },
-          { label: "Cannula Length", value: "100 mm" },
+          { label: "Longitud de Punta Activa", value: "10 mm" },
+          { label: "Calibre de Cánula", value: "18G" },
+          { label: "Longitud de Cánula", value: "100 mm" },
           { label: "Tip Shape", value: "Hybrid" },
         ],
         availability: "on_request",
@@ -170,9 +170,9 @@ export const products: Product[] = [
     relatedProducts: ["conventional-cannula", "tined-cannula"],
     body: [
       "La cánula híbrida Avanos combina características de la cánula convencional y la cánula Tined en una sola configuración. Su punta activa de 10 mm con gauge 18G permite lesiones de mayor cobertura que la convencional estándar, mientras mantiene la versatilidad de uso clínico en procedimientos donde la orientación direccional puede variar intraoperatoriamente.",
-      "Esta cánula está pensada para procedimientos donde el clínico busca flexibilidad entre técnica convencional y orientación Tined sin cambiar de insumo intraoperatorio. Es compatible con generadores Avanos de la línea RFA. Pain Solutions distribuye esta configuración en Perú; si su práctica busca una sola cánula para indicaciones mixtas, la hybrid cannula puede ser la respuesta.",
+      "Esta cánula está pensada para procedimientos donde el clínico busca flexibilidad entre técnica convencional y orientación Tined sin cambiar de insumo intraoperatorio. Es compatible con generadores Avanos de la línea RFA. Pain Solutions distribuye esta configuración en Perú; si su práctica busca una sola cánula para indicaciones mixtas, la cánula híbrida puede ser la respuesta.",
     ],
-    seoTitle: "Hybrid Cannula Avanos 18G 10mm — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Cánula Híbrida Avanos 18G 10mm — Distribuidor en Perú | Pain Solutions",
     seoDescription:
       "Cánula híbrida Avanos para RFA convencional con punta activa de 10 mm, gauge 18G. Compatible con sistema Avanos. Distribuidor en Perú.",
   },
@@ -197,9 +197,9 @@ export const products: Product[] = [
       {
         sku: "CRFK-22-150",
         attributes: [
-          { label: "Active Tip Length", value: "4 mm" },
-          { label: "Cannula Gauge", value: "22G" },
-          { label: "Cannula Length", value: "150 mm" },
+          { label: "Longitud de Punta Activa", value: "4 mm" },
+          { label: "Calibre de Cánula", value: "22G" },
+          { label: "Longitud de Cánula", value: "150 mm" },
         ],
         availability: "on_request",
       },
@@ -235,7 +235,7 @@ export const products: Product[] = [
       {
         sku: "FDI-22",
         attributes: [
-          { label: "Cannula Gauge", value: "22G" },
+          { label: "Calibre de Cánula", value: "22G" },
           { label: "Length", value: "150 mm" },
         ],
         availability: "on_request",
@@ -253,9 +253,9 @@ export const products: Product[] = [
   {
     slug: "water-cooled-probes",
     brand: "AVANOS",
-    name: "Water Cooled Probes",
+    name: "Electrodos Refrigerados con Agua",
     family: "cooled",
-    productType: "Probe",
+    productType: "Electrodo",
     shortDescription:
       "Sondas refrigeradas por agua para Cooled RFA. Control térmico superior para lesiones de mayor volumen.",
     longDescription:
@@ -271,9 +271,9 @@ export const products: Product[] = [
       {
         sku: "WCP-22-150",
         attributes: [
-          { label: "Active Tip Length", value: "4 mm" },
-          { label: "Cannula Gauge", value: "22G" },
-          { label: "Cannula Length", value: "150 mm" },
+          { label: "Longitud de Punta Activa", value: "4 mm" },
+          { label: "Calibre de Cánula", value: "22G" },
+          { label: "Longitud de Cánula", value: "150 mm" },
         ],
         availability: "on_request",
       },
@@ -283,16 +283,16 @@ export const products: Product[] = [
       "Las sondas refrigeradas por agua Avanos entregan control térmico continuo durante la ablación Cooled RFA. Su punta activa de 4 mm con gauge 22G y longitud 150 mm permite lesiones de mayor volumen que la RFA convencional, manteniendo la temperatura tisular dentro del rango óptimo durante todo el procedimiento.",
       "Estas sondas requieren el generador Avanos y la bomba Cooled RFA para operar como sistema completo. La refrigeración por agua se traduce en lesiones predecibles donde la RFA convencional podría quedar subdimensionada. Pain Solutions distribuye las sondas refrigeradas Avanos en Perú; si su centro busca Cooled RFA, nuestro equipo puede revisar la configuración completa del sistema y validar la compatibilidad con su generador y bomba actuales.",
     ],
-    seoTitle: "Water Cooled Probes Avanos 22G 150mm — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodos Refrigerados con Agua Avanos 22G 150mm — Distribuidor en Perú | Pain Solutions",
     seoDescription:
       "Sondas refrigeradas por agua Avanos para Cooled RFA. Punta activa de 4 mm, gauge 22G, longitud 150 mm. Distribuidor en Perú.",
   },
   {
     slug: "tined-cannula",
     brand: "AVANOS",
-    name: "Tined Cannula",
+    name: "Cánula Tined",
     family: "tined",
-    productType: "Cannula",
+    productType: "Cánula",
     shortDescription:
       "Cánula con aletas para Tined RFA. Orientación perpendicular y estabilización tisular para nervios motores y ramas difíciles.",
     longDescription:
@@ -302,15 +302,15 @@ export const products: Product[] = [
       "Aletas (tines) para estabilidad en tejido — anclaje direccional",
       "Punta activa de 10 mm — lesión orientada perpendicular al nervio",
       "Gauge 22G — perfil más fino para planos profundos",
-      "Cannula Length 150 mm — alcance a planos anatómicos más profundos",
+      "Longitud de cánula 150 mm — alcance a planos anatómicos más profundos",
     ],
     variants: [
       {
         sku: "TC-22-150",
         attributes: [
-          { label: "Active Tip Length", value: "10 mm" },
-          { label: "Cannula Gauge", value: "22G" },
-          { label: "Cannula Length", value: "150 mm" },
+          { label: "Longitud de Punta Activa", value: "10 mm" },
+          { label: "Calibre de Cánula", value: "22G" },
+          { label: "Longitud de Cánula", value: "150 mm" },
           { label: "Tip Shape", value: "Tined" },
         ],
         availability: "on_request",
@@ -322,16 +322,16 @@ export const products: Product[] = [
       "La cánula Tined Avanos incorpora aletas (tines) en el extremo activo que anclan la cánula en el tejido y dirigen la corriente de forma perpendicular al eje del nervio. Esta configuración es particularmente valiosa cuando se busca afectar nervios motores sin lesionar estructuras adyacentes, o cuando la orientación anatómica exige precisión direccional que la cánula convencional no entrega.",
       "La configuración de 22G con punta activa de 10 mm y longitud 150 mm permite acceder a planos tisulares más profundos manteniendo el perfil fino característico de las cánulas Tined. Compatible con los generadores Avanos de la línea RFA. Pain Solutions distribuye la cánula Tined en Perú; si su práctica busca orientación perpendicular para indicaciones específicas, la cánula Tined es la configuración correcta.",
     ],
-    seoTitle: "Tined Cannula Avanos 22G 150mm — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Cánula Tined Avanos 22G 150mm — Distribuidor en Perú | Pain Solutions",
     seoDescription:
       "Cánula con aletas Avanos para Tined RFA. Punta activa de 10 mm, gauge 22G, longitud 150 mm. Distribuidor en Perú.",
   },
   {
     slug: "tined-reusable-probe",
     brand: "AVANOS",
-    name: "Tined Reusable Probe",
+    name: "Electrodo Reutilizable Tined",
     family: "tined",
-    productType: "Probe",
+    productType: "Electrodo",
     shortDescription:
       "Sonda reutilizable con aletas para Tined RFA. Combina durabilidad con orientación direccional constante.",
     longDescription:
@@ -347,8 +347,8 @@ export const products: Product[] = [
       {
         sku: "TRP-22",
         attributes: [
-          { label: "Cannula Gauge", value: "22G" },
-          { label: "Active Tip Length", value: "10 mm" },
+          { label: "Calibre de Cánula", value: "22G" },
+          { label: "Longitud de Punta Activa", value: "10 mm" },
         ],
         availability: "on_request",
       },
@@ -356,18 +356,18 @@ export const products: Product[] = [
     relatedProducts: ["tined-cannula", "tined-single-use-probe"],
     body: [
       "La sonda reutilizable Tined Avanos está diseñada para centros que realizan un volumen elevado de procedimientos Tined RFA y pueden amortizar la inversión en una sonda durable con aletas. Su punta activa de 10 mm con gauge 22G mantiene la orientación direccional consistente entre usos, característica esencial de las técnicas Tined.",
-      "Esta sonda se esteriliza según el protocolo del fabricante entre usos. Es compatible con los generadores Avanos de la línea RFA y con las cánulas Tined cannula del portafolio. Pain Solutions distribuye la sonda Tined reutilizable en Perú; si su centro busca optimizar el costo por procedimiento Tined, esta es la configuración correcta.",
+      "Esta sonda se esteriliza según el protocolo del fabricante entre usos. Es compatible con los generadores Avanos de la línea RFA y con las cánulas Tined del portafolio. Pain Solutions distribuye la sonda Tined reutilizable en Perú; si su centro busca optimizar el costo por procedimiento Tined, esta es la configuración correcta.",
     ],
-    seoTitle: "Tined Reusable Probe Avanos 22G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo Reutilizable Tined Avanos 22G — Distribuidor en Perú | Pain Solutions",
     seoDescription:
       "Sonda reutilizable con aletas Avanos para Tined RFA. Punta activa de 10 mm, gauge 22G. Distribuidor en Perú.",
   },
   {
     slug: "tined-single-use-probe",
     brand: "AVANOS",
-    name: "Tined Single Use Probe",
+    name: "Electrodo de Un Solo Uso Tined",
     family: "tined",
-    productType: "Probe",
+    productType: "Electrodo",
     shortDescription:
       "Sonda de un solo uso con aletas para Tined RFA. Esterilidad garantizada y rendimiento consistente.",
     longDescription:
@@ -383,8 +383,8 @@ export const products: Product[] = [
       {
         sku: "TSP-22",
         attributes: [
-          { label: "Cannula Gauge", value: "22G" },
-          { label: "Active Tip Length", value: "10 mm" },
+          { label: "Calibre de Cánula", value: "22G" },
+          { label: "Longitud de Punta Activa", value: "10 mm" },
         ],
         availability: "on_request",
       },
@@ -392,9 +392,9 @@ export const products: Product[] = [
     relatedProducts: ["tined-cannula", "tined-reusable-probe"],
     body: [
       "La sonda de un solo uso Tined Avanos garantiza la máxima esterilidad en cada procedimiento Tined RFA, eliminando el riesgo residual asociado a procesos de re-esterilización. Su punta activa de 10 mm con gauge 22G y las aletas direccionales mantienen la orientación perpendicular característica de la técnica Tined con la consistencia que solo un insumo nuevo por procedimiento puede entregar.",
-      "Esta sonda es ideal para centros con volumen moderado, clínicas que prefieren flujo de un solo uso, o contextos donde la trazabilidad individual del insumo es un requisito regulatorio. Pain Solutions distribuye la sonda Tined single-use en Perú; si su centro prioriza esterilidad y trazabilidad por sobre reuso, esta es la configuración correcta.",
+      "Esta sonda es ideal para centros con volumen moderado, clínicas que prefieren flujo de un solo uso, o contextos donde la trazabilidad individual del insumo es un requisito regulatorio. Pain Solutions distribuye la sonda de un solo uso Tined en Perú; si su centro prioriza esterilidad y trazabilidad por sobre reuso, esta es la configuración correcta.",
     ],
-    seoTitle: "Tined Single Use Probe Avanos 22G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo de Un Solo Uso Tined Avanos 22G — Distribuidor en Perú | Pain Solutions",
     seoDescription:
       "Sonda de un solo uso con aletas Avanos para Tined RFA. Punta activa de 10 mm, gauge 22G. Distribuidor en Perú.",
   },

@@ -50,7 +50,7 @@ export const families: Family[] = [
       "Componentes especializados para soluciones de radiofrecuencia refrigerada (Cooled RFA). Control térmico avanzado para lesiones de mayor volumen.",
     body: [
       "La radiofrecuencia refrigerada (Cooled RFA) permite generar lesiones de mayor volumen que la RFA convencional, manteniendo el control sobre la temperatura del tejido. La refrigeración interna de la punta activa disipa el calor adyacente, lo que posibilita aplicar mayor potencia durante más tiempo sin carbonización del tejido inmediato.",
-      "La familia Cooled incluye kits completos, introductores de fluido (Fluid Delivery Introducers) y sondas refrigeradas por agua (Water Cooled Probes). Cada componente está diseñado para integrarse con el generador y la bomba del sistema Cooled RFA.",
+      "La familia Cooled incluye kits completos, introductores de fluido (Fluid Delivery Introducers) y electrodos refrigerados por agua (Water Cooled Probes). Cada componente está diseñado para integrarse con el generador y la bomba del sistema Cooled RFA.",
       "La configuración típica requiere generador compatible, bomba de perfusión y cánula específica. Pain Solutions puede asesorar sobre la configuración completa para su centro y validar las compatibilidades del sistema.",
     ],
     specs: [

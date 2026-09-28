@@ -47,7 +47,13 @@ const steps = [
 ];
 
 const partners = [
-  { name: "Avanos", logo: "/images/partners/avanos.png" },
+  { name: "Avanos", logo: "/images/partners/avanos.png", width: 600, height: 600 },
+  {
+    name: "Baylis Medical",
+    logo: "/images/partners/baylis.png",
+    width: 563,
+    height: 376,
+  },
 ];
 
 export default function HomePage() {
@@ -69,9 +75,9 @@ export default function HomePage() {
                     <Image
                       src={partner.logo}
                       alt={partner.name}
-                      width={600}
-                      height={600}
-                      className="h-14 w-48 object-cover sm:h-16 sm:w-56"
+                      width={partner.width}
+                      height={partner.height}
+                      className="h-16 w-auto max-w-56 object-contain"
                     />
                   </li>
                 ))}
