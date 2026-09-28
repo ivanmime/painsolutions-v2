@@ -97,7 +97,7 @@ export default function HomePage() {
                   Manifiesto
                 </Eyebrow>
                 <h2 className="mt-6 font-sans text-[2.25rem] font-extrabold leading-[1.1] tracking-[-0.02em] text-paper text-balance sm:text-[2.75rem] lg:text-[3.5rem]">
-                  La radiofrecuencia es una técnica, no un catálogo.
+                  La radiofrecuencia es una solución, no una técnica.
                 </h2>
               </Reveal>
             </div>
