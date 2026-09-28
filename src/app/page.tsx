@@ -49,7 +49,7 @@ const steps = [
 const partners = [
   { name: "Avanos", logo: "/images/partners/avanos.png", width: 600, height: 600 },
   {
-    name: "Baylis Medical",
+    name: "Baylis Medtech",
     logo: "/images/partners/baylis.png",
     width: 563,
     height: 376,
@@ -170,9 +170,9 @@ export default function HomePage() {
               light
             />
             <Stat
-              value="01"
-              label="Fabricante"
-              hint="Avanos"
+              value="02"
+              label="Fabricantes"
+              hint="Avanos · Baylis Medtech"
               light
             />
             <Stat

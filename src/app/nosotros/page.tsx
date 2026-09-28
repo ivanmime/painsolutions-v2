@@ -71,7 +71,7 @@ export default function NosotrosPage() {
         <Container>
           <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             <Stat value="30+" label="Años" hint="Manejo del dolor" light />
-            <Stat value="02" label="Fabricantes" hint="Avanos · Baylis Medical" light />
+            <Stat value="02" label="Fabricantes" hint="Avanos · Baylis Medtech" light />
             <Stat value="13" label="Referencias" hint="Catálogo vigente" light />
             <Stat value="PE" label="Cobertura" hint="Nacional" light />
           </div>

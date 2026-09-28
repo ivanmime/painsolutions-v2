@@ -43,13 +43,13 @@ const equipment: RentalEquipment[] = [
   },
   {
     code: "02",
-    brand: "BAYLIS MEDICAL",
+    brand: "BAYLIS MEDTECH",
     name: "Baylis RF",
     image: "/images/products/baylis-cooled-rf.png",
     description:
-      "Equipo Baylis RF de Baylis Medical para procedimientos de radiofrecuencia refrigerada, con el generador de manejo del dolor de la marca.",
+      "Equipo Baylis RF de Baylis Medtech para procedimientos de radiofrecuencia refrigerada, con el generador de manejo del dolor de la marca.",
     specs: [
-      { label: "Proveedor", value: "Baylis Medical" },
+      { label: "Proveedor", value: "Baylis Medtech" },
       { label: "Modalidad", value: "Cooled RFA" },
     ],
   },
