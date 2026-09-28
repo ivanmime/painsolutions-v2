@@ -14,7 +14,7 @@ import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 export const metadata: Metadata = {
   title: "Nosotros",
   description:
-    "Tecnología médica con acompañamiento especializado. Pain Solutions facilita el acceso de profesionales e instituciones de salud a soluciones tecnológicas especializadas.",
+    "Tecnología especializada para el manejo intervencionista del dolor. Pain Solutions facilita el acceso de profesionales e instituciones de salud a soluciones tecnológicas especializadas.",
   alternates: { canonical: "/nosotros" },
 };
 
@@ -47,8 +47,8 @@ export default function NosotrosPage() {
       <PageHero
         number="N.01"
         eyebrow="Pain Solutions"
-        title="Tecnología médica con acompañamiento especializado"
-        lead="Facilitamos el acceso de profesionales e instituciones de salud a soluciones tecnológicas especializadas para el manejo del dolor."
+        title="Tecnología especializada para el manejo intervencionista del dolor"
+        lead="Ponemos a disposición de médicos e instituciones de salud soluciones de radiofrecuencia y tecnología médica especializada, seleccionadas para responder a las necesidades reales de la práctica clínica."
       />
 
       <section className="py-20 sm:py-28">
@@ -56,24 +56,22 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-12 gap-x-6 gap-y-12">
             <div className="col-span-12 lg:col-span-4">
               <Reveal>
-                <Eyebrow number="N.02">Quiénes somos</Eyebrow>
+                <Eyebrow number="N.02">Propuesta de valor</Eyebrow>
               </Reveal>
             </div>
             <div className="col-span-12 lg:col-span-8">
               <Reveal delay={0.1}>
                 <p className="heading-section text-[1.75rem] text-navy sm:text-[2.25rem]">
-                  Conectamos necesidades médicas con tecnología
-                  especializada
+                  Tecnología. Conocimiento. Acompañamiento.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="mt-7 max-w-2xl text-[1.0625rem] leading-[1.7] text-ink-soft">
-                  Pain Solutions nace para acercar equipos, insumos y
-                  soluciones médicas especializadas a profesionales e
-                  instituciones de salud. Trabajamos conectando las
-                  necesidades de nuestros clientes con tecnología
-                  desarrollada por fabricantes internacionales, acompañando
-                  el proceso desde la consulta inicial hasta la adquisición.
+                  Desde la identificación de la solución adecuada hasta su
+                  implementación, trabajamos junto al profesional y la
+                  institución para facilitar el acceso a tecnología
+                  especializada para el tratamiento del dolor, dado que
+                  contamos con más de 17 años de experiencia.
                 </p>
               </Reveal>
             </div>
@@ -169,7 +167,7 @@ export default function NosotrosPage() {
                         y los cuidados paliativos.
                       </p>
                       <p className="mt-4 text-[0.9375rem] leading-[1.65] text-ink-soft">
-                        Director de la Clínica del Dolor de Lima desde 2011 y
+                        Director de la Clínica del Dolor de Lima desde 2009 y
                         con 32 años de experiencia clínica en EsSalud, formado
                         en la Universidad Nacional Mayor de San Marcos.
                       </p>
@@ -187,7 +185,7 @@ export default function NosotrosPage() {
                             Director
                           </span>
                           <p className="mt-1 text-[0.875rem] text-ink-soft">
-                            Clínica del Dolor de Lima (desde 2011)
+                            Clínica del Dolor de Lima (desde 2009)
                           </p>
                         </li>
                         <li>
@@ -286,13 +284,22 @@ export default function NosotrosPage() {
                   Nuestro propósito
                 </Eyebrow>
                 <h2 className="mt-6 heading-section text-[2.25rem] text-paper sm:text-[3rem] lg:text-[3.75rem]">
-                  Facilitar el acceso a tecnología médica especializada
+                  Acercar tecnología especializada a quienes trabajan cada
+                  día para aliviar el dolor
                 </h2>
-                <p className="mt-4 max-w-xl text-[1.0625rem] leading-[1.65] text-paper/75">
-                  Mediante una experiencia profesional, clara y cercana.
+                <p className="mt-6 max-w-2xl text-[1.0625rem] leading-[1.7] text-paper/75">
+                  Creemos que el acceso a tecnología médica especializada debe
+                  estar acompañado de información clara, conocimiento y
+                  atención cercana.
+                </p>
+                <p className="mt-5 max-w-2xl text-[1.0625rem] leading-[1.7] text-paper/75">
+                  Por eso buscamos conectar a médicos e instituciones de salud
+                  con soluciones de fabricantes especializados, facilitando el
+                  proceso desde la evaluación de la necesidad hasta la
+                  adquisición y el acompañamiento posterior.
                 </p>
               </div>
-              <div className="col-span-12 flex flex-wrap items-center gap-3 lg:col-span-5 lg:justify-end">
+              <div className="col-span-12 flex flex-col items-start gap-3 lg:col-span-5 lg:items-end lg:self-end">
                 <ButtonLink href="/soluciones" variant="light">
                   Explorar soluciones médicas
                 </ButtonLink>
