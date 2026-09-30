@@ -99,20 +99,32 @@ export default function HomePage() {
                 <h2 className="mt-6 font-sans text-[2.25rem] font-extrabold leading-[1.1] tracking-[-0.02em] text-paper text-balance sm:text-[2.75rem] lg:text-[3.5rem]">
                   La radiofrecuencia es una solución, no una técnica.
                 </h2>
-              </Reveal>
-            </div>
-            <div className="col-span-12 lg:col-span-5">
-              <Reveal delay={0.15}>
-                <p className="text-[1.0625rem] leading-[1.65] text-paper/75">
-                  Trabajamos con soluciones de radiofrecuencia que integran
-                  equipos, cánulas, sondas y accesorios. Acompañamos a
-                  profesionales e instituciones en la elección de la
-                  configuración adecuada antes de cotizar.
+                <p className="mt-6 text-[1.0625rem] leading-[1.65] text-paper/75">
+                  Es un sistema compuesto por tecnología, consumibles y
+                  accesorios que deben responder a las necesidades de cada
+                  procedimiento. En Pain Solutions trabajamos con soluciones de
+                  radiofrecuencia que integran equipos, cánulas, sondas y
+                  accesorios, y acompañamos a profesionales e instituciones en
+                  la elección de la configuración adecuada antes de cotizar.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-3">
                   <ButtonLink href="/soluciones/rfa" variant="primary-light">
                     Conocer RFA Solutions
                   </ButtonLink>
+                </div>
+              </Reveal>
+            </div>
+            <div className="col-span-12 lg:col-span-5">
+              <Reveal delay={0.15} className="mx-auto w-full max-w-[15rem] lg:max-w-[17rem]">
+                <div className="relative aspect-[9/16] w-full overflow-hidden">
+                  <iframe
+                    src="https://www.youtube.com/embed/6jMniGwepr4?rel=0"
+                    title="Video: soluciones de radiofrecuencia Pain Solutions"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full"
+                  />
                 </div>
               </Reveal>
             </div>
