@@ -288,13 +288,54 @@ export default function NosotrosPage() {
         />
       </section>
 
+      {/* ── N.05 · Formación para profesionales de la salud ───── */}
+      <section className="bg-ice/50 py-20 sm:py-28">
+        <Container>
+          <div className="grid grid-cols-12 gap-x-6 gap-y-10">
+            <div className="col-span-12 lg:col-span-5">
+              <Reveal>
+                <SectionHeading
+                  eyebrow="Formación clínica"
+                  number="N.05"
+                  title="Entender la tecnología también es parte de una buena práctica clínica."
+                  description="Ponemos a disposición de profesionales de la salud contenido especializado sobre radiofrecuencia y manejo intervencionista del dolor, con el objetivo de acercar conocimiento útil para la práctica clínica."
+                />
+              </Reveal>
+            </div>
+            <div className="col-span-12 lg:col-span-7">
+              <Reveal delay={0.15}>
+                <div className="relative aspect-video w-full overflow-hidden border-2 border-ink bg-ink">
+                  <iframe
+                    src="https://www.youtube.com/embed/OXbnB9ZDLvs?rel=0"
+                    title="Radiofrecuencia: fundamentos, tecnología y aplicaciones en el manejo intervencionista del dolor"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="absolute inset-0 h-full w-full"
+                  />
+                </div>
+                <div className="mt-8 flex flex-wrap items-center gap-3">
+                  <ButtonLink
+                    href="https://www.youtube.com/channel/UCO6KtgQvPtV1IGxAPQy-FpQ"
+                    variant="primary"
+                    external
+                  >
+                    Ver más información
+                  </ButtonLink>
+                </div>
+              </Reveal>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <section className="relative overflow-hidden bg-navy py-20 text-paper sm:py-28">
         <GridOverlay className="opacity-30" />
         <Container className="relative">
           <Reveal>
             <div className="grid grid-cols-12 gap-x-6 gap-y-10">
               <div className="col-span-12 lg:col-span-7">
-                <Eyebrow light number="N.05">
+                <Eyebrow light number="N.06">
                   Nuestro propósito
                 </Eyebrow>
                 <h2 className="mt-6 heading-section text-[2.25rem] text-paper sm:text-[3rem] lg:text-[3.75rem]">
