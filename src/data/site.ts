@@ -5,7 +5,7 @@ export const site = {
   promise: "La más alta tecnología al servicio de todos",
   description:
     "Conectamos a profesionales e instituciones de salud con equipos, insumos y soluciones médicas de fabricantes internacionales para el manejo del dolor.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.painsolutionsperu.com",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "51932441179",
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL || "painsolutionsperu@gmail.com",
