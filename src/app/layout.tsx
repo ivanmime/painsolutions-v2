@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
@@ -18,6 +19,9 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains",
   display: "swap",
 });
+
+const gaId = process.env.NEXT_PUBLIC_GA4_ID || "G-NND8KDGSJY";
+const enableAnalytics = process.env.NODE_ENV === "production";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -98,6 +102,20 @@ export default function RootLayout({
         </main>
         <SiteFooter />
         <WhatsAppButton />
+        {enableAnalytics && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaId}');`}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   );
