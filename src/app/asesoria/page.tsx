@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import AsesoriaForm from "@/components/forms/AsesoriaForm";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container, Eyebrow, SectionHeading } from "@/components/ui/Layout";
@@ -6,11 +7,15 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { whatsappLink } from "@/data/site";
 
+const metaTitle = "Asesoría";
+const metaDescription =
+  "Acompañamiento para sacar el máximo provecho de tu equipo y su configuración: dudas de uso, configuración y manejo, como parte de la postventa o mediante horas de asesoría adicionales.";
+
 export const metadata: Metadata = {
-  title: "Asesoría",
-  description:
-    "Acompañamiento para sacar el máximo provecho de tu equipo y su configuración: dudas de uso, configuración y manejo, como parte de la postventa o mediante horas de asesoría adicionales.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: { canonical: "/asesoria" },
+  openGraph: pageOpenGraph("/asesoria", metaTitle, metaDescription),
 };
 
 const WHATSAPP_ASESORIA =

@@ -62,7 +62,7 @@ export const products: Product[] = [
       "La cánula convencional Avanos de 18G y 100 mm con punta activa de 5 mm está diseñada para procedimientos estándar de ablación por radiofrecuencia convencional. Su configuración permite lesiones focales en nervios periféricos, ramas articulares y ramas comunicantes, con la precisión que requieren los procedimientos intervencionistas de manejo del dolor. La punta activa de 5 mm genera una lesión térmica predecible cuando se aplica la energía recomendada por el fabricante.",
       "Esta cánula es compatible con los generadores Avanos de la línea RFA y se integra con sondas reutilizables y de un solo uso del portafolio. La selección de calibre y longitud debe considerar la profundidad del tejido objetivo y la anatomía del paciente. Pain Solutions distribuye la línea completa Avanos en Perú; si necesita orientación sobre la configuración correcta para una indicación específica, nuestro equipo puede revisar las alternativas disponibles.",
     ],
-    seoTitle: "Cánula Convencional 18G 100mm — Distribuidor Avanos en Perú | Pain Solutions",
+    seoTitle: "Cánula Convencional 18G 100mm — Distribuidor Avanos en Perú",
     seoDescription:
       "Cánula Avanos para RFA convencional con punta activa de 5 mm, gauge 18G y longitud 100 mm. Compatible con generadores Avanos. Distribuidor en Perú.",
   },
@@ -98,7 +98,7 @@ export const products: Product[] = [
       "La sonda reutilizable Avanos para RFA convencional está diseñada para centros que realizan un volumen elevado de procedimientos y pueden amortizar la inversión en una sonda durable. Su punta activa de 5 mm y gauge 18G entregan una lesión focal predecible en nervios periféricos, ramas articulares y ramas comunicantes, manteniendo las características técnicas del sistema convencional Avanos.",
       "Esta sonda se esteriliza según el protocolo del fabricante entre usos, lo que reduce el costo por procedimiento en centros con flujo clínico sostenido. Es compatible con los generadores Avanos de la línea RFA y con las cánulas convencionales del portafolio. Pain Solutions distribuye esta sonda en Perú; si su centro busca optimizar el costo por procedimiento sin sacrificar precisión, nuestro equipo puede revisar las alternativas disponibles.",
     ],
-    seoTitle: "Electrodo Reutilizable Convencional Avanos 18G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo Reutilizable Convencional Avanos 18G — Distribuidor en Perú",
     seoDescription:
       "Sonda reutilizable Avanos para RFA convencional. Punta activa de 5 mm, gauge 18G. Compatible con generadores Avanos. Distribuidor en Perú.",
   },
@@ -134,7 +134,7 @@ export const products: Product[] = [
       "La sonda de un solo uso Avanos para RFA convencional garantiza la máxima esterilidad en cada procedimiento, eliminando el riesgo residual asociado a procesos de re-esterilización. Su punta activa de 5 mm y gauge 18G entregan una lesión focal predecible en nervios periféricos, ramas articulares y ramas comunicantes, con la misma precisión técnica que la sonda reutilizable.",
       "Esta sonda es ideal para centros con volumen moderado, clínicas que prefieren flujo de un solo uso por procedimiento, o contextos donde la trazabilidad individual del insumo es un requisito regulatorio. Pain Solutions distribuye la sonda de un solo uso Avanos en Perú; si su centro prioriza esterilidad y trazabilidad por sobre reuso, esta es la configuración correcta.",
     ],
-    seoTitle: "Electrodo de Un Solo Uso Convencional Avanos 18G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo de Un Solo Uso Convencional Avanos 18G — Distribuidor en Perú",
     seoDescription:
       "Sonda de un solo uso Avanos para RFA convencional. Punta activa de 5 mm, gauge 18G. Esterilidad garantizada. Distribuidor en Perú.",
   },
@@ -172,7 +172,7 @@ export const products: Product[] = [
       "La cánula híbrida Avanos combina características de la cánula convencional y la cánula Tined en una sola configuración. Su punta activa de 10 mm con gauge 18G permite lesiones de mayor cobertura que la convencional estándar, mientras mantiene la versatilidad de uso clínico en procedimientos donde la orientación direccional puede variar intraoperatoriamente.",
       "Esta cánula está pensada para procedimientos donde el clínico busca flexibilidad entre técnica convencional y orientación Tined sin cambiar de insumo intraoperatorio. Es compatible con generadores Avanos de la línea RFA. Pain Solutions distribuye esta configuración en Perú; si su práctica busca una sola cánula para indicaciones mixtas, la cánula híbrida puede ser la respuesta.",
     ],
-    seoTitle: "Cánula Híbrida Avanos 18G 10mm — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Cánula Híbrida Avanos 18G 10mm — Distribuidor en Perú",
     seoDescription:
       "Cánula híbrida Avanos para RFA convencional con punta activa de 10 mm, gauge 18G. Compatible con sistema Avanos. Distribuidor en Perú.",
   },
@@ -210,7 +210,7 @@ export const products: Product[] = [
       "El kit Cooled RF Avanos agrupa los componentes necesarios para configurar Cooled RFA en un centro. Incluye la cánula refrigerada, los introductores de fluido y los accesorios de conexión requeridos para el sistema. La cánula de 22G con punta activa de 4 mm y longitud 150 mm permite acceder a planos tisulares más profundos con control térmico de la punta activa durante la ablación.",
       "Este kit requiere el generador Avanos y la bomba Cooled RFA para funcionar como sistema completo. La refrigeración interna mantiene la temperatura de la punta dentro del rango óptimo durante el procedimiento, lo que se traduce en lesiones de mayor volumen con menor riesgo de sobrecalentamiento tisular. Pain Solutions distribuye el kit completo en Perú; si está evaluando Cooled RFA para su práctica, nuestro equipo puede revisar la configuración completa del sistema y validar las compatibilidades del set con su generador actual, si aplica.",
     ],
-    seoTitle: "Cooled RF Kit Avanos 22G 150mm — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Cooled RF Kit Avanos 22G 150mm — Distribuidor en Perú",
     seoDescription:
       "Kit completo Avanos para Cooled RFA. Punta activa de 4 mm, gauge 22G, longitud 150 mm. Compatible con generador y bomba Avanos. Distribuidor en Perú.",
   },
@@ -246,7 +246,7 @@ export const products: Product[] = [
       "Los introductores de fluido Avanos son el componente que conecta la cánula refrigerada con la bomba Cooled RFA, permitiendo el flujo controlado de refrigerante durante el procedimiento. Su diseño está optimizado para integrarse con la bomba del sistema sin adaptadores adicionales, eliminando variabilidad entre componentes y asegurando el control térmico de la punta activa según las especificaciones del fabricante.",
       "Este componente forma parte del kit Cooled RF y está pensado para reemplazo o reposición cuando el flujo clínico lo requiera. Pain Solutions distribuye los introductores Avanos en Perú; si su centro ya opera Cooled RFA y necesita reposición de introductores, nuestro equipo puede ayudarle con la logística.",
     ],
-    seoTitle: "Fluid Delivery Introducers Avanos 22G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Fluid Delivery Introducers Avanos 22G — Distribuidor en Perú",
     seoDescription:
       "Introductores de fluido Avanos para Cooled RFA. Control preciso del refrigerante. Compatible con sistema Cooled Avanos. Distribuidor en Perú.",
   },
@@ -283,7 +283,7 @@ export const products: Product[] = [
       "Las sondas refrigeradas por agua Avanos entregan control térmico continuo durante la ablación Cooled RFA. Su punta activa de 4 mm con gauge 22G y longitud 150 mm permite lesiones de mayor volumen que la RFA convencional, manteniendo la temperatura tisular dentro del rango óptimo durante todo el procedimiento.",
       "Estas sondas requieren el generador Avanos y la bomba Cooled RFA para operar como sistema completo. La refrigeración por agua se traduce en lesiones predecibles donde la RFA convencional podría quedar subdimensionada. Pain Solutions distribuye las sondas refrigeradas Avanos en Perú; si su centro busca Cooled RFA, nuestro equipo puede revisar la configuración completa del sistema y validar la compatibilidad con su generador y bomba actuales.",
     ],
-    seoTitle: "Electrodos Refrigerados con Agua Avanos 22G 150mm — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodos Refrigerados con Agua Avanos 22G 150mm — Distribuidor en Perú",
     seoDescription:
       "Sondas refrigeradas por agua Avanos para Cooled RFA. Punta activa de 4 mm, gauge 22G, longitud 150 mm. Distribuidor en Perú.",
   },
@@ -322,7 +322,7 @@ export const products: Product[] = [
       "La cánula Tined Avanos incorpora aletas (tines) en el extremo activo que anclan la cánula en el tejido y dirigen la corriente de forma perpendicular al eje del nervio. Esta configuración es particularmente valiosa cuando se busca afectar nervios motores sin lesionar estructuras adyacentes, o cuando la orientación anatómica exige precisión direccional que la cánula convencional no entrega.",
       "La configuración de 22G con punta activa de 10 mm y longitud 150 mm permite acceder a planos tisulares más profundos manteniendo el perfil fino característico de las cánulas Tined. Compatible con los generadores Avanos de la línea RFA. Pain Solutions distribuye la cánula Tined en Perú; si su práctica busca orientación perpendicular para indicaciones específicas, la cánula Tined es la configuración correcta.",
     ],
-    seoTitle: "Cánula Tined Avanos 22G 150mm — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Cánula Tined Avanos 22G 150mm — Distribuidor en Perú",
     seoDescription:
       "Cánula con aletas Avanos para Tined RFA. Punta activa de 10 mm, gauge 22G, longitud 150 mm. Distribuidor en Perú.",
   },
@@ -358,7 +358,7 @@ export const products: Product[] = [
       "La sonda reutilizable Tined Avanos está diseñada para centros que realizan un volumen elevado de procedimientos Tined RFA y pueden amortizar la inversión en una sonda durable con aletas. Su punta activa de 10 mm con gauge 22G mantiene la orientación direccional consistente entre usos, característica esencial de las técnicas Tined.",
       "Esta sonda se esteriliza según el protocolo del fabricante entre usos. Es compatible con los generadores Avanos de la línea RFA y con las cánulas Tined del portafolio. Pain Solutions distribuye la sonda Tined reutilizable en Perú; si su centro busca optimizar el costo por procedimiento Tined, esta es la configuración correcta.",
     ],
-    seoTitle: "Electrodo Reutilizable Tined Avanos 22G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo Reutilizable Tined Avanos 22G — Distribuidor en Perú",
     seoDescription:
       "Sonda reutilizable con aletas Avanos para Tined RFA. Punta activa de 10 mm, gauge 22G. Distribuidor en Perú.",
   },
@@ -394,7 +394,7 @@ export const products: Product[] = [
       "La sonda de un solo uso Tined Avanos garantiza la máxima esterilidad en cada procedimiento Tined RFA, eliminando el riesgo residual asociado a procesos de re-esterilización. Su punta activa de 10 mm con gauge 22G y las aletas direccionales mantienen la orientación perpendicular característica de la técnica Tined con la consistencia que solo un insumo nuevo por procedimiento puede entregar.",
       "Esta sonda es ideal para centros con volumen moderado, clínicas que prefieren flujo de un solo uso, o contextos donde la trazabilidad individual del insumo es un requisito regulatorio. Pain Solutions distribuye la sonda de un solo uso Tined en Perú; si su centro prioriza esterilidad y trazabilidad por sobre reuso, esta es la configuración correcta.",
     ],
-    seoTitle: "Electrodo de Un Solo Uso Tined Avanos 22G — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Electrodo de Un Solo Uso Tined Avanos 22G — Distribuidor en Perú",
     seoDescription:
       "Sonda de un solo uso con aletas Avanos para Tined RFA. Punta activa de 10 mm, gauge 22G. Distribuidor en Perú.",
   },
@@ -432,7 +432,7 @@ export const products: Product[] = [
       "El generador RFA Avanos es el corazón del sistema de ablación por radiofrecuencia. Entrega control preciso de energía en el rango de 0–50 W con una frecuencia estándar de 480 kHz, lo que cubre los modos Conventional, Cooled y Tined sin necesidad de cambiar de equipo entre técnicas. Su interfaz está diseñada para operación intuitiva por parte del equipo clínico, con ajustes finos que permiten adaptar el procedimiento a la indicación específica.",
       "Este generador se integra con la bomba Cooled RFA para procedimientos refrigerados y con todos los cables y cánulas del portafolio Avanos. Pain Solutions distribuye el generador RFA Avanos en Perú; si su centro está configurando un sistema RFA completo o evaluando la actualización del generador actual, nuestro equipo puede revisar las compatibilidades y la configuración óptima con su práctica clínica.",
     ],
-    seoTitle: "Generador RFA Avanos 480 kHz — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Generador RFA Avanos 480 kHz — Distribuidor en Perú",
     seoDescription:
       "Generador de radiofrecuencia Avanos. Potencia 0–50 W, frecuencia 480 kHz. Compatible con línea RFA completa. Distribuidor en Perú.",
   },
@@ -468,7 +468,7 @@ export const products: Product[] = [
       "La bomba RFA Avanos entrega flujo constante y controlado de refrigerante durante los procedimientos Cooled RFA. Su diseño compacto y portátil facilita la integración en el quirófano sin requerir adaptaciones especiales del espacio. La integración con el sistema Cooled RFA Avanos está validada por el fabricante, eliminando variabilidad entre componentes y asegurando el control térmico según las especificaciones del procedimiento.",
       "La bomba opera junto con el generador RFA Avanos y con los introductores de fluido del portafolio. Pain Solutions distribuye la bomba RFA Avanos en Perú; si su centro está configurando Cooled RFA o necesita reposición del componente, nuestro equipo puede revisar la configuración completa del sistema.",
     ],
-    seoTitle: "Bomba RFA Avanos Cooled — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Bomba RFA Avanos Cooled — Distribuidor en Perú",
     seoDescription:
       "Bomba Avanos para Cooled RFA. Flujo constante y controlado. Compatible con sistema Cooled Avanos. Distribuidor en Perú.",
   },
@@ -504,7 +504,7 @@ export const products: Product[] = [
       "Los cables RFA Avanos conectan el generador con las cánulas y sondas del sistema, asegurando transmisión de señal sin pérdida durante el procedimiento. Su blindaje y construcción están optimizados para la frecuencia de 480 kHz del sistema Avanos, eliminando artefactos y manteniendo la integridad de la señal de radiofrecuencia.",
       "Estos cables son compatibles con todos los generadores y cánulas del portafolio Avanos. Pain Solutions distribuye los cables RFA en Perú; si su centro necesita reposición o expansión del cableado del sistema, nuestro equipo puede revisar las opciones disponibles.",
     ],
-    seoTitle: "Cables RFA Avanos — Distribuidor en Perú | Pain Solutions",
+    seoTitle: "Cables RFA Avanos — Distribuidor en Perú",
     seoDescription:
       "Cables de conexión Avanos para sistema RFA. Conexión segura y confiable. Compatible con generadores Avanos. Distribuidor en Perú.",
   },

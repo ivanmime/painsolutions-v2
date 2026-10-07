@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import Image from "next/image";
 import Hero from "@/components/sections/Hero";
 import FamilyCard from "@/components/cards/FamilyCard";
@@ -16,11 +17,15 @@ import { families } from "@/data/families";
 import { getFeaturedProducts } from "@/data/products";
 import { site, whatsappLink } from "@/data/site";
 
+const metaTitle = "Pain Solutions | Tecnología para el manejo del dolor";
+const metaDescription =
+  "Soluciones, equipos e insumos especializados para profesionales e instituciones de salud. Conoce el portafolio de Pain Solutions.";
+
 export const metadata: Metadata = {
-  title: "Pain Solutions | Tecnología para el manejo del dolor",
-  description:
-    "Soluciones, equipos e insumos especializados para profesionales e instituciones de salud. Conoce el portafolio de Pain Solutions.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: { canonical: "/" },
+  openGraph: pageOpenGraph("/", metaTitle, metaDescription),
 };
 
 const steps = [

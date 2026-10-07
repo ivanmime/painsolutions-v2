@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 import ProductCard from "@/components/cards/ProductCard";
 import { ButtonLink } from "@/components/ui/Button";
@@ -35,6 +36,11 @@ export async function generateMetadata({
     title: family.name,
     description: family.shortDescription,
     alternates: { canonical: `/soluciones/rfa/${family.slug}` },
+    openGraph: pageOpenGraph(
+      `/soluciones/rfa/${family.slug}`,
+      family.name,
+      family.shortDescription,
+    ),
   };
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import FamilyCard from "@/components/cards/FamilyCard";
 import ProductCard from "@/components/cards/ProductCard";
 import { ButtonLink } from "@/components/ui/Button";
@@ -11,11 +12,15 @@ import { Reveal, Stagger } from "@/components/motion/Reveal";
 import { families } from "@/data/families";
 import { products } from "@/data/products";
 
+const metaTitle = "Soluciones de radiofrecuencia";
+const metaDescription =
+  "Explora equipos, cánulas, sondas y accesorios especializados para soluciones de radiofrecuencia Avanos RFA.";
+
 export const metadata: Metadata = {
-  title: "Soluciones de radiofrecuencia",
-  description:
-    "Explora equipos, cánulas, sondas y accesorios especializados para soluciones de radiofrecuencia Avanos RFA.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: { canonical: "/soluciones/rfa" },
+  openGraph: pageOpenGraph("/soluciones/rfa", metaTitle, metaDescription),
 };
 
 export default function RfaPage() {

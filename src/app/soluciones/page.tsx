@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import FamilyCard from "@/components/cards/FamilyCard";
 import ProductCard from "@/components/cards/ProductCard";
 import { ButtonLink } from "@/components/ui/Button";
@@ -11,11 +12,15 @@ import { Reveal, Stagger } from "@/components/motion/Reveal";
 import { families } from "@/data/families";
 import { products } from "@/data/products";
 
+const metaTitle = "Soluciones médicas";
+const metaDescription =
+  "Conoce equipos, insumos y accesorios especializados disponibles dentro del portafolio de Pain Solutions.";
+
 export const metadata: Metadata = {
-  title: "Soluciones médicas",
-  description:
-    "Conoce equipos, insumos y accesorios especializados disponibles dentro del portafolio de Pain Solutions.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: { canonical: "/soluciones" },
+  openGraph: pageOpenGraph("/soluciones", metaTitle, metaDescription),
 };
 
 export default function SolucionesPage() {

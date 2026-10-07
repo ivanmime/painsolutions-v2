@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import {
@@ -11,11 +12,15 @@ import { GridOverlay } from "@/components/ui/GridOverlay";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 
+const metaTitle = "Nosotros";
+const metaDescription =
+  "Tecnología especializada para el manejo intervencionista del dolor. Pain Solutions facilita el acceso de profesionales e instituciones de salud a soluciones tecnológicas especializadas.";
+
 export const metadata: Metadata = {
-  title: "Nosotros",
-  description:
-    "Tecnología especializada para el manejo intervencionista del dolor. Pain Solutions facilita el acceso de profesionales e instituciones de salud a soluciones tecnológicas especializadas.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: { canonical: "/nosotros" },
+  openGraph: pageOpenGraph("/nosotros", metaTitle, metaDescription),
 };
 
 const mission = [

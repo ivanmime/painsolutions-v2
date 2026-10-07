@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { site } from "@/data/site";
+import { ogImage } from "@/lib/metadata";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
@@ -31,11 +32,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: "Pain Solutions | Tecnología para el manejo del dolor",
     description: site.description,
+    images: [ogImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "Pain Solutions | Tecnología para el manejo del dolor",
     description: site.description,
+    images: ["/og"],
   },
   robots: { index: true, follow: true },
 };

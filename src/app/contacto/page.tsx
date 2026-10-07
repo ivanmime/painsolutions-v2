@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import ContactForm from "@/components/forms/ContactForm";
 import {
   Container,
@@ -10,11 +11,15 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/motion/Reveal";
 import { site, whatsappLink } from "@/data/site";
 
+const metaTitle = "Contacto";
+const metaDescription =
+  "Contáctanos para solicitar información sobre productos, disponibilidad, cotizaciones o asesoría.";
+
 export const metadata: Metadata = {
-  title: "Contacto",
-  description:
-    "Contáctanos para solicitar información sobre productos, disponibilidad, cotizaciones o asesoría.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: { canonical: "/contacto" },
+  openGraph: pageOpenGraph("/contacto", metaTitle, metaDescription),
 };
 
 const channels = [

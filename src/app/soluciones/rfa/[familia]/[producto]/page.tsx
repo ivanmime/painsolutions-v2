@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import QuoteForm from "@/components/forms/QuoteForm";
@@ -44,10 +45,11 @@ export async function generateMetadata({
     alternates: {
       canonical: `/soluciones/rfa/${product.family}/${product.slug}`,
     },
-    openGraph: {
-      title: product.seoTitle,
-      description: product.seoDescription,
-    },
+    openGraph: pageOpenGraph(
+      `/soluciones/rfa/${product.family}/${product.slug}`,
+      product.seoTitle,
+      product.seoDescription,
+    ),
   };
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageOpenGraph } from "@/lib/metadata";
 import Link from "next/link";
 import Image from "next/image";
 import AlquilerForm from "@/components/forms/AlquilerForm";
@@ -9,11 +10,15 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { whatsappLink } from "@/data/site";
 
+const metaTitle = "Alquiler por procedimiento";
+const metaDescription =
+  "Alquiler del equipo Coolief RF de Avanos o del Baylis RF para procedimientos que requieran esta tecnología, con soporte operativo y logístico coordinado para cada caso.";
+
 export const metadata: Metadata = {
-  title: "Alquiler por procedimiento",
-  description:
-    "Alquiler del equipo Coolief RF de Avanos o del Baylis RF para procedimientos que requieran esta tecnología, con soporte operativo y logístico coordinado para cada caso.",
+  title: metaTitle,
+  description: metaDescription,
   alternates: { canonical: "/alquiler" },
+  openGraph: pageOpenGraph("/alquiler", metaTitle, metaDescription),
 };
 
 const WHATSAPP_ALQUILER =
