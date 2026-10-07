@@ -19,7 +19,7 @@ import { site, whatsappLink } from "@/data/site";
 
 const metaTitle = "Pain Solutions | Tecnología para el manejo del dolor";
 const metaDescription =
-  "Soluciones, equipos e insumos especializados para profesionales e instituciones de salud. Conoce el portafolio de Pain Solutions.";
+  "Distribuidores en Perú de las líneas de radiofrecuencia Avanos y Baylis Medtech: equipos, cánulas, sondas y accesorios. Asesoría y cotización.";
 
 export const metadata: Metadata = {
   title: metaTitle,
